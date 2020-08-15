@@ -1,9 +1,15 @@
 package model;
 
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 /**
  *
@@ -40,6 +46,24 @@ public abstract class AbstractMenu extends ImageView {
         menu.getvBox().setPrefWidth(140);
         menu.getvBox().setPrefHeight(screenHeight - 100);
         altKategoriEventHandler();
+    }
+
+    public void start(Stage primaryStage, String fxmlName) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/" + fxmlName + ".fxml"));
+
+            Parent root = loader.load();
+
+            Scene scene = new Scene(root);
+
+            primaryStage.setScene(scene);
+            primaryStage.setX(175);
+            primaryStage.setY(129);
+            
+            primaryStage.show();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
     public abstract void altKategoriEventHandler();

@@ -3,15 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/model/Cari.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLStokKartEkle.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/ViewManager.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/model/Stok.java</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/model/EPosta.java</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/model/Menu.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLStokKartEkleController.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/model/AbstractMenu.java</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/model/Loglar.java</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/model/CekSenet.java</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/ctn/CTN.java</file>
         </group>
     </open-files>
 </project-private>

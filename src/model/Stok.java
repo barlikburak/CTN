@@ -1,6 +1,7 @@
 package model;
 
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 /**
  *
@@ -25,7 +26,7 @@ public class Stok extends AbstractMenu {
     @Override
     public void altKategoriEventHandler() {
         getvBox().getChildren().get(0).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-
+            start(new Stage(), "FXMLStokKartEkle");
         });
         getvBox().getChildren().get(1).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
 

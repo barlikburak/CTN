@@ -2,7 +2,6 @@ package model;
 
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
@@ -53,7 +52,7 @@ public abstract class AbstractMenu extends ImageView {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/" + fxmlName + ".fxml"));
 
             Parent root = loader.load();
-
+                                   
             Scene scene = new Scene(root);
 
             primaryStage.setScene(scene);
@@ -65,7 +64,7 @@ public abstract class AbstractMenu extends ImageView {
             ex.printStackTrace();
         }
     }
-
+    
     public abstract void altKategoriEventHandler();
 
     public Menu getMenu() {

@@ -9,8 +9,8 @@ import javafx.fxml.Initializable;
  *
  * @author burak
  */
-public class FXMLStokKartEkleController implements Initializable {
-    
+public class FXMLStokKartListeleController implements Initializable {
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //TODO

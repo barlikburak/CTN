@@ -1,5 +1,6 @@
 package model;
 
+import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -49,5 +50,5 @@ public class Kasa extends AbstractMenu {
             
         });
     }
-    
+
 }

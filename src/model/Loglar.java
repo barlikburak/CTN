@@ -1,5 +1,7 @@
 package model;
 
+import javafx.fxml.FXMLLoader;
+
 /**
  *
  * @author burak
@@ -16,5 +18,5 @@ public class Loglar extends AbstractMenu {
     public void altKategoriEventHandler() {
 
     }
-
+    
 }

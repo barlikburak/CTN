@@ -47,7 +47,7 @@ public class Stok extends AbstractMenu {
             start(new Stage(), "FXMLStokRapor");
         });
         getvBox().getChildren().get(7).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-
+            start(new Stage(), "FXMLAlinanUrunRapor");
         });
 
     }  

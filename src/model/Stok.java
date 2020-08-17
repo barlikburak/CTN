@@ -17,7 +17,7 @@ public class Stok extends AbstractMenu {
         altkategori[2] = "faturasiz-alis.png";
         altkategori[3] = "faturali-alis.png";
         altkategori[4] = "alis-iade.png";
-        altkategori[5] = "stok-transfer.png";
+        altkategori[5] = "toplu-fis-fiyat-guncelle.png";
         altkategori[6] = "alinan-urun-rapor.png";
         altkategori[7] = "stok-rapor.png";
         eventHandler(menu);
@@ -38,7 +38,7 @@ public class Stok extends AbstractMenu {
             start(new Stage(), "FXMLFaturaliAlis");
         });
         getvBox().getChildren().get(4).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-
+            start(new Stage(), "FXMLAlisIade");
         });
         getvBox().getChildren().get(5).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
 

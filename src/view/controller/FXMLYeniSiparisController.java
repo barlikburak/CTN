@@ -9,7 +9,7 @@ import javafx.fxml.Initializable;
  *
  * @author burak
  */
-public class FXMLYeniTeklifController implements Initializable {
+public class FXMLYeniSiparisController implements Initializable {
 
     /**
      * Initializes the controller class.

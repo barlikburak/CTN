@@ -28,7 +28,7 @@ public class TeklifSiparis extends AbstractMenu {
             start(new Stage(), "FXMLYeniSiparis");
         });
         getvBox().getChildren().get(2).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            
+            start(new Stage(), "FXMLTeklifSiparisRapor");
         });
         getvBox().getChildren().get(3).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
             

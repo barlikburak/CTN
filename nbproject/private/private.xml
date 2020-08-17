@@ -5,16 +5,20 @@
         <group>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLStokKartListele.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLEPostaGonderController.java</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLLoglarController.java</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLStokRapor.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLLoglar.fxml</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/model/Stok.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLYeniTeklifController.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/model/EPosta.java</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLTopluEPosta.fxml</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLYeniTeklif.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLTopluEPostaController.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/model/Loglar.java</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLEPostaGonder.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLAlinanUrunRapor.fxml</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLLoglarController.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLStokRapor.fxml</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/model/Stok.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLTopluEPosta.fxml</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLFaturaliAlis.fxml</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/model/TeklifSiparis.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLEPostaGonder.fxml</file>
         </group>
     </open-files>
 </project-private>

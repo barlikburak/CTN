@@ -2,6 +2,7 @@ package model;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 /**
  *
@@ -22,7 +23,7 @@ public class TeklifSiparis extends AbstractMenu {
     @Override
     public void altKategoriEventHandler() {
         getvBox().getChildren().get(0).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-
+            start(new Stage(), "FXMLYeniTeklif");
         });
         getvBox().getChildren().get(1).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
             

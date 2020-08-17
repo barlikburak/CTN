@@ -1,6 +1,7 @@
 package model;
 
 import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
 
 /**
  *
@@ -16,7 +17,7 @@ public class Loglar extends AbstractMenu {
     
     @Override
     public void altKategoriEventHandler() {
-
+        start(new Stage(), "FXMLLoglar");
     }
     
 }

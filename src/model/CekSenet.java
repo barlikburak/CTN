@@ -36,7 +36,7 @@ public class CekSenet extends AbstractMenu {
             start(new Stage(), "FXMLMusteriSenedi");
         });
         getvBox().getChildren().get(4).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            
+            start(new Stage(), "FXMLCekSenetCirola");
         });
     }
 

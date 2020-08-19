@@ -4,16 +4,20 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLMusteriSenediController.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLStokKartListele.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLTeklifSiparisUrunRapor.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLTeklifSiparisRaporController.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLKendiSenedimController.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLCekSenetCirola.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLYeniSiparis.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLTeklifSiparisRapor.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLYeniSiparisController.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLMusteriCeki.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLYeniTeklif.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLMusteriSenedi.fxml</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLStokKartListeleController.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLKendiCekim.fxml</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLCekSenetCirolaController.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLKendiCekimController.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLAlinanUrunRapor.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/model/CekSenet.java</file>

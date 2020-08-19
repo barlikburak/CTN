@@ -8,13 +8,15 @@
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLYeniSiparis.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLTeklifSiparisRapor.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLYeniSiparisController.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLMusteriCeki.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLYeniTeklif.fxml</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/model/TeklifSiparis.java</file>
-            <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLTeklifSiparisUrunRaporController.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLKendiCekim.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLKendiCekimController.java</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/view/fxml/FXMLAlinanUrunRapor.fxml</file>
             <file>file:/home/burak/NetBeansProjects/CTN/src/model/CekSenet.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLMusteriCekiController.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/model/TeklifSiparis.java</file>
+            <file>file:/home/burak/NetBeansProjects/CTN/src/view/controller/FXMLTeklifSiparisUrunRaporController.java</file>
         </group>
     </open-files>
 </project-private>

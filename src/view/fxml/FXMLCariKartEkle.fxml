@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="490.0" prefWidth="775.0">
+         <children>
+            <Text layoutX="10.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Adı" />
+            <Text layoutX="10.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Unvanı / Soyad" />
+            <Text layoutX="10.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Kodu" />
+            <Text layoutX="10.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Grubu" />
+            <Text layoutX="10.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Limiti" />
+            <Text layoutX="10.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Web Sitesi" />
+            <Text layoutX="10.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hatırlatma Günü" />
+            <Text layoutX="10.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para Birimi" />
+            <Text layoutX="10.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vergi Dairesi" />
+            <Text layoutX="10.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vergi No" />
+            <Text layoutX="10.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Açıklaması" />
+            <Text layoutX="10.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Güzergah/Rut" />
+            <Text layoutX="10.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Satış Fiyat Tipi" />
+            <TextField layoutX="160.0" layoutY="2.0" prefWidth="200.0" />
+            <TextField layoutX="160.0" layoutY="32.0" prefWidth="200.0" />
+            <TextField layoutX="160.0" layoutY="62.0" prefWidth="200.0" />
+            <ComboBox editable="true" layoutX="160.0" layoutY="92.0" prefWidth="200.0" />
+            <TextField alignment="CENTER_RIGHT" layoutX="160.0" layoutY="122.0" prefWidth="200.0" text="0" />
+            <TextField layoutX="160.0" layoutY="152.0" prefWidth="200.0" />
+            <TextField layoutX="160.0" layoutY="182.0" prefWidth="200.0" />
+            <TextField layoutX="160.0" layoutY="242.0" prefWidth="200.0" />
+            <TextField layoutX="160.0" layoutY="272.0" prefWidth="200.0" />
+            <ComboBox editable="true" layoutX="160.0" layoutY="212.0" prefWidth="200.0" />
+            <TextArea layoutX="160.0" layoutY="303.0" prefHeight="80.0" prefWidth="200.0" />
+            <Text layoutX="10.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RIFD" />
+            <TextField layoutX="160.0" layoutY="447.0" prefWidth="200.0" />
+            <ComboBox editable="true" layoutX="160.0" layoutY="417.0" prefWidth="200.0" />
+            <ComboBox editable="true" layoutX="160.0" layoutY="387.0" prefWidth="200.0" />
+            <Text layoutX="425.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adres Adı" />
+            <Text layoutX="425.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail" />
+            <Text layoutX="425.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefon" />
+            <Text layoutX="425.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bölge" />
+            <Text layoutX="425.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adres" />
+            <Text layoutX="425.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posta Kodu" />
+            <TextField layoutX="525.0" layoutY="2.0" prefWidth="225.0" />
+            <TextField layoutX="525.0" layoutY="32.0" prefWidth="225.0" promptText="example@gmail.com" />
+            <TextField layoutX="525.0" layoutY="62.0" pickOnBounds="false" prefWidth="225.0" text="+90" />
+            <TextField layoutX="525.0" layoutY="92.0" prefWidth="225.0" />
+            <TextArea layoutX="525.0" layoutY="125.0" prefHeight="80.0" prefWidth="225.0" />
+            <TextField layoutX="525.0" layoutY="212.0" prefWidth="85.0" />
+            <CheckBox disable="true" layoutX="616.0" layoutY="216.0" mnemonicParsing="false" selected="true" text="Varsayılan Adres" />
+            <Button layoutX="587.0" layoutY="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Temizle" />
+            <Button layoutX="675.0" layoutY="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: darkblue; -fx-text-fill: white;" text="Kaydet" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

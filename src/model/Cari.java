@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class Cari extends AbstractMenu {
 
     public Cari(Menu menu) {
-        super(menu,"cari");
+        super(menu, "cari");
         altkategori = new String[8];
         altkategori[0] = "cari-islemler.png";
         altkategori[1] = "cari-kart-ekle.png";
@@ -22,7 +22,7 @@ public class Cari extends AbstractMenu {
         altkategori[7] = "gunluk-izleme.png";
         eventHandler(menu);
     }
-    
+
     @Override
     public void altKategoriEventHandler() {
         getvBox().getChildren().get(0).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
@@ -32,22 +32,22 @@ public class Cari extends AbstractMenu {
             start(new Stage(), "FXMLCariKartEkle");
         });
         getvBox().getChildren().get(2).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            
+            start(new Stage(), "FXMLCariListesi");
         });
         getvBox().getChildren().get(3).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            
+
         });
         getvBox().getChildren().get(4).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            
+
         });
         getvBox().getChildren().get(5).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            
+
         });
         getvBox().getChildren().get(6).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            
+
         });
         getvBox().getChildren().get(7).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            
+
         });
     }
 

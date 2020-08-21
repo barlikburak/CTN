@@ -9,9 +9,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="202.0" prefWidth="402.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="400.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="220.0" prefWidth="400.0">
          <children>
             <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Tüm Tarihler" />
             <RadioButton layoutX="14.0" layoutY="44.0" mnemonicParsing="false" text="Tarih Aralığı" />
@@ -21,8 +21,10 @@
             <Line endX="285.0" layoutX="115.0" layoutY="73.0" startX="-115.0" />
             <ComboBox layoutX="125.0" layoutY="91.0" prefHeight="26.0" prefWidth="260.0" />
             <Text layoutX="14.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Seçimi" />
-            <Line endX="285.0" layoutX="115.0" layoutY="136.0" startX="-115.0" />
-            <Button layoutX="121.0" layoutY="155.0" mnemonicParsing="false" style="-fx-background-color: lightblue;" text="RAPORU GÖRÜNTÜLE" />
+            <Line endX="285.0" layoutX="115.0" layoutY="165.0" startX="-115.0" />
+            <Button layoutX="121.0" layoutY="180.0" mnemonicParsing="false" style="-fx-background-color: lightblue;" text="RAPORU GÖRÜNTÜLE" />
+            <RadioButton layoutX="60.0" layoutY="133.0" mnemonicParsing="false" text="Artan Sıralama" />
+            <RadioButton layoutX="225.0" layoutY="133.0" mnemonicParsing="false" text="Azalan Sıralama" />
          </children></AnchorPane>
   </content>
 </ScrollPane>

@@ -38,16 +38,16 @@ public class Cari extends AbstractMenu {
             start(new Stage(), "FXMLCariEkstreRapor");
         });
         getvBox().getChildren().get(4).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-
+            start(new Stage(), "FXMLDetayliCariEkstreRapor");
         });
         getvBox().getChildren().get(5).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-
+            start(new Stage(), "FXMLTahsilatOdemeRapor");
         });
         getvBox().getChildren().get(6).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-
+            start(new Stage(), "FXMLAlacakBorcRapor");
         });
         getvBox().getChildren().get(7).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-
+            start(new Stage(), "FXMLGunlukIzleme");
         });
     }
 

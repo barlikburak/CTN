@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="402.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="400.0">
+         <children>
+            <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Tümü" />
+            <RadioButton layoutX="14.0" layoutY="44.0" mnemonicParsing="false" text="Vade Geçenler" />
+            <RadioButton layoutX="14.0" layoutY="74.0" mnemonicParsing="false" text="Tarih Aralığı" />
+            <DatePicker layoutX="134.0" layoutY="70.0" prefWidth="120.0" />
+            <DatePicker layoutX="266.0" layoutY="70.0" prefWidth="120.0" />
+            <Text layoutX="258.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+            <Line endX="299.0" layoutX="101.0" layoutY="109.0" startX="-100.0" />
+            <Text layoutX="14.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durum" />
+            <CheckBox layoutX="14.0" layoutY="140.0" mnemonicParsing="false" text="Alacak" />
+            <CheckBox layoutX="127.0" layoutY="140.0" mnemonicParsing="false" text="Borç" />
+            <CheckBox layoutX="227.0" layoutY="140.0" mnemonicParsing="false" text="Bakiyesi Sıfır Olanlar" />
+            <Line endX="299.0" layoutX="101.0" layoutY="166.0" startX="-100.0" />
+            <RadioButton layoutX="14.0" layoutY="180.0" mnemonicParsing="false" text="Tüm Cariler" />
+            <RadioButton layoutX="13.0" layoutY="210.0" mnemonicParsing="false" text="Cari Grubu" />
+            <ComboBox layoutX="120.0" layoutY="206.0" prefHeight="26.0" prefWidth="264.0" />
+            <Line endX="299.0" layoutX="100.0" layoutY="270.0" startX="-100.0" />
+            <RadioButton layoutX="254.0" layoutY="244.0" mnemonicParsing="false" text="Azalan Sıralama" />
+            <RadioButton layoutX="120.0" layoutY="244.0" mnemonicParsing="false" text="Artan Sıralama" />
+            <Button layoutX="127.0" layoutY="290.0" mnemonicParsing="false" style="-fx-background-color: lightblue;" text="Raporu Görüntüle" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

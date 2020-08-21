@@ -35,7 +35,7 @@ public class Cari extends AbstractMenu {
             start(new Stage(), "FXMLCariListesi");
         });
         getvBox().getChildren().get(3).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-
+            start(new Stage(), "FXMLCariEkstreRapor");
         });
         getvBox().getChildren().get(4).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
 

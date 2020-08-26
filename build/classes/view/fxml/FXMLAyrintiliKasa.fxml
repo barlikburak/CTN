@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="800.0">
+            <children>
+                <Text layoutX="199.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarih Aralığı" />
+                <DatePicker layoutX="452.0" layoutY="5.0" prefWidth="150.0" />
+                <AnchorPane layoutY="20.0" prefHeight="140.0" prefWidth="400.0">
+                    <children>
+                        <Label layoutX="165.0" layoutY="14.0" text="Nakit Kasa" textFill="RED">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="244.0" layoutY="44.0" text="₺" />
+                        <Label layoutX="244.0" layoutY="73.0" text="\$" />
+                        <Label layoutX="244.0" layoutY="104.0" text="€" />
+                        <TextField alignment="CENTER_RIGHT" editable="false" layoutX="160.0" layoutY="37.0" prefWidth="80.0" text="0,00" />
+                        <TextField alignment="CENTER_RIGHT" editable="false" layoutX="160.0" layoutY="67.0" prefWidth="80.0" text="0,00" />
+                        <TextField alignment="CENTER_RIGHT" editable="false" layoutX="160.0" layoutY="97.0" prefWidth="80.0" text="0,00" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="400.0" layoutY="20.0" prefHeight="140.0" prefWidth="400.0">
+                    <children>
+                        <Label layoutX="180.0" layoutY="14.0" text="Banka" textFill="RED">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="244.0" layoutY="44.0" text="₺" />
+                        <Label layoutX="244.0" layoutY="73.0" text="\$" />
+                        <Label layoutX="244.0" layoutY="104.0" text="€" />
+                        <TextField alignment="CENTER_RIGHT" editable="false" layoutX="160.0" layoutY="37.0" prefWidth="80.0" text="0,00" />
+                        <TextField alignment="CENTER_RIGHT" editable="false" layoutX="160.0" layoutY="67.0" prefWidth="80.0" text="0,00" />
+                        <TextField alignment="CENTER_RIGHT" editable="false" layoutX="160.0" layoutY="97.0" prefWidth="80.0" text="0,00" />
+                    </children>
+                </AnchorPane>
+                <DatePicker layoutX="285.0" layoutY="5.0" prefWidth="150.0" />
+                <Text layoutX="441.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                <ScrollPane layoutY="150.0" prefHeight="278.0" prefWidth="397.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="276.0" prefWidth="395.0">
+                            <children>
+                                <TableView prefHeight="200.0" prefWidth="397.0" tableMenuButtonVisible="true">
+                                    <placeholder>
+                                        <Label text="Veri Yok" />
+                                    </placeholder>
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="İşlem Türü (Kasa)" />
+                                        <TableColumn maxWidth="4000.0" prefWidth="75.0" text="Tutar" />
+                                        <TableColumn maxWidth="4000.0" prefWidth="75.0" text="Döviz" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="284.0" layoutY="202.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="284.0" layoutY="227.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="284.0" layoutY="252.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <Text layoutX="12.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gelir(₺)" />
+                                <Text layoutX="12.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gelir($)" />
+                                <Text layoutX="12.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gelir(€)" />
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="95.0" layoutY="202.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="95.0" layoutY="227.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="95.0" layoutY="252.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <Text layoutX="198.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gider(₺)" />
+                                <Text layoutX="198.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gider($)" />
+                                <Text layoutX="198.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gider(€)" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+                <ScrollPane layoutX="400.0" layoutY="150.0" prefHeight="278.0" prefWidth="397.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="276.0" prefWidth="395.0">
+                            <children>
+                                <TableView prefHeight="200.0" prefWidth="397.0" tableMenuButtonVisible="true">
+                                    <placeholder>
+                                        <Label text="Veri Yok" />
+                                    </placeholder>
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="İşlem Türü (Kasa)" />
+                                        <TableColumn maxWidth="4000.0" prefWidth="75.0" text="Tutar" />
+                                        <TableColumn maxWidth="4000.0" prefWidth="75.0" text="Döviz" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="284.0" layoutY="202.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="284.0" layoutY="227.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="284.0" layoutY="252.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <Text layoutX="12.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gelir(₺)" />
+                                <Text layoutX="12.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gelir($)" />
+                                <Text layoutX="12.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gelir(€)" />
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="95.0" layoutY="202.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="95.0" layoutY="227.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <TextField alignment="CENTER_RIGHT" editable="false" layoutX="95.0" layoutY="252.0" minHeight="23.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="0,00" />
+                                <Text layoutX="198.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gider(₺)" />
+                                <Text layoutX="198.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gider($)" />
+                                <Text layoutX="198.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gider(€)" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            <TextField alignment="CENTER_RIGHT" editable="false" layoutX="666.0" layoutY="490.0" prefHeight="29.0" prefWidth="120.0" style="-fx-background-color: lightblue;" text="0,00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></TextField>
+            <TextField alignment="CENTER_RIGHT" editable="false" layoutX="666.0" layoutY="460.0" prefHeight="29.0" prefWidth="120.0" style="-fx-background-color: lightblue;" text="0,00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></TextField>
+            <TextField alignment="CENTER_RIGHT" editable="false" layoutX="666.0" layoutY="430.0" prefHeight="29.0" prefWidth="120.0" style="-fx-background-color: lightblue;" text="0,00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></TextField>
+            <TextField alignment="CENTER_RIGHT" editable="false" layoutX="666.0" layoutY="520.0" prefHeight="29.0" prefWidth="120.0" style="-fx-background-color: lightgreen;" text="0,00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></TextField>
+            <Text layoutX="530.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Net Bakiye(₺)">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="530.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Net Bakiye($)">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="530.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Net Bakiye(€)">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="530.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Net Kâr(₺)">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gelir(₺)" />
+            <Text layoutX="14.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gelir($)" />
+            <Text layoutX="14.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gelir(€)" />
+            <TextField alignment="CENTER_RIGHT" editable="false" layoutX="115.0" layoutY="444.0" minHeight="25.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: lightblue;" text="0,00" />
+            <TextField alignment="CENTER_RIGHT" editable="false" layoutX="115.0" layoutY="474.0" minHeight="25.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: lightblue;" text="0,00" />
+            <TextField alignment="CENTER_RIGHT" editable="false" layoutX="115.0" layoutY="504.0" minHeight="25.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: lightblue;" text="0,00" />
+            <Text layoutX="285.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gider(₺)" />
+            <Text layoutX="285.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gider($)" />
+            <Text layoutX="285.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top. Gider(€)" />
+            <TextField alignment="CENTER_RIGHT" editable="false" layoutX="385.0" layoutY="444.0" minHeight="25.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: lightblue;" text="0,00" />
+            <TextField alignment="CENTER_RIGHT" editable="false" layoutX="385.0" layoutY="474.0" minHeight="25.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: lightblue;" text="0,00" />
+            <TextField alignment="CENTER_RIGHT" editable="false" layoutX="385.0" layoutY="504.0" minHeight="25.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: lightblue;" text="0,00" />
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

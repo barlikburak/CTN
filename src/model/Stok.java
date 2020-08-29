@@ -26,7 +26,7 @@ public class Stok extends AbstractMenu {
     @Override
     public void altKategoriEventHandler() {
         getvBox().getChildren().get(0).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLStokKartEkle");
+            start(new Stage(), "FXMLStokKartEkle", "Stok Kart Ekle");
         });
         getvBox().getChildren().get(1).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
             start(new Stage(), "FXMLStokKartListele");
@@ -50,6 +50,6 @@ public class Stok extends AbstractMenu {
             start(new Stage(), "FXMLAlinanUrunRapor");
         });
 
-    }  
+    }
 
 }

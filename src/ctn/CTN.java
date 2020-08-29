@@ -9,15 +9,15 @@ import view.ViewManager;
  * @author burak
  */
 public class CTN extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
         try {
             ViewManager manager = new ViewManager();
             primaryStage = manager.getMainStage();
             primaryStage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            System.out.println("ERROR: " + ex.getMessage());
         }
     }
 
@@ -27,5 +27,5 @@ public class CTN extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

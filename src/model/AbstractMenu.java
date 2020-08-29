@@ -4,6 +4,7 @@ import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -52,19 +53,40 @@ public abstract class AbstractMenu extends ImageView {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/" + fxmlName + ".fxml"));
 
             Parent root = loader.load();
-                                   
+
             Scene scene = new Scene(root);
 
             primaryStage.setScene(scene);
             primaryStage.setX(175);
             primaryStage.setY(129);
+
+            primaryStage.show();
+        } catch (IOException ex) {
+            System.out.println("ERROR: " + ex.getMessage());
+        }
+    }
+
+    public void start(Stage primaryStage, String fxmlName, String title) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/" + fxmlName + ".fxml"));
+
+            Parent root = loader.load();
+
+            Scene scene = new Scene(root);
+
+            primaryStage.setScene(scene);
+            primaryStage.setX(175);
+            primaryStage.setY(129);
+
+            primaryStage.setTitle(title);
+            primaryStage.getIcons().add(getImage());
             
             primaryStage.show();
         } catch (IOException ex) {
-            ex.printStackTrace();
+            System.out.println("ERROR: " + ex.getMessage());
         }
     }
-    
+
     public abstract void altKategoriEventHandler();
 
     public Menu getMenu() {

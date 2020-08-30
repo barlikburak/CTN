@@ -23,6 +23,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import movements.JDialog;
 import movements.RandomSayi;
+import movements.StokGirisKontrol;
 
 /**
  * FXML Controller class
@@ -38,13 +39,13 @@ public class FXMLStokKartEkleController implements Initializable {
     @FXML
     private Spinner<Integer> spinnerAdet;
     @FXML
-    private ComboBox cbKategori;
+    private ComboBox<String> cbKategori;
     @FXML
-    private ComboBox cbKDV;
+    private ComboBox<Integer> cbKDV;
     @FXML
-    private ComboBox cbKDVTipi;
+    private ComboBox<String> cbKDVTipi;
     @FXML
-    private ComboBox cbBirim;
+    private ComboBox<String> cbBirim;
     @FXML
     private TextField tfBarkod;
     @FXML
@@ -61,10 +62,10 @@ public class FXMLStokKartEkleController implements Initializable {
     private ImageView ivPlus;
 
     private SpinnerValueFactory<Integer> svf;
-    private ObservableList olKategori;
-    private ObservableList olKDV;
-    private ObservableList olKDVTipi;
-    private ObservableList olBirim;
+    private ObservableList<String> olKategori;
+    private ObservableList<Integer> olKDV;
+    private ObservableList<String> olKDVTipi;
+    private ObservableList<String> olBirim;
     private Effect efekt;
 
     /**
@@ -80,7 +81,7 @@ public class FXMLStokKartEkleController implements Initializable {
 
         olKategori = FXCollections.observableArrayList("Demirbaş", "Genel");
         cbKategori.setItems(olKategori);
-        olKDV = FXCollections.observableArrayList("0", "1", "5", "8", "18");
+        olKDV = FXCollections.observableArrayList(0, 1, 5, 8, 18);
         cbKDV.setItems(olKDV);
         olKDVTipi = FXCollections.observableArrayList("Dahil", "Hariç");
         cbKDVTipi.setItems(olKDVTipi);
@@ -189,127 +190,34 @@ public class FXMLStokKartEkleController implements Initializable {
     }
 
     private String getUyari() {
-        if (isHataBarkod()) {
+        if (StokGirisKontrol.isHataBarkod(tfBarkod)) {
             return "13 haneli barkod girişi yapın.";
         }
-        if (isHataUrunIsmi()) {
+        if (StokGirisKontrol.isHataTextField(tfUrunIsmi)) {
             return "Ürün ismi girişini yapın.";
         }
-        if (isHataKategori()) {
+        if (StokGirisKontrol.isHataComboBox(cbKategori, olKategori)) {
             return "Kategoriyi listeden seçin.";
         }
-        if (isHataAlisFiyat()) {
+        if (StokGirisKontrol.isHataAlisFiyat(tfAlisFiyat)) {
             return "Alış fiyatı girişini düzeltin.";
         }
-        if (isHataSatisFiyat()) {
+        if (StokGirisKontrol.isHataSatisFiyat(tfSatisFiyat)) {
             return "Satış fiyatı girişini düzeltin.";
         }
-        if (isHataKDV()) {
+        if (StokGirisKontrol.isHataComboBox(cbKDV, olKDV)) {
             return "KDV'yi listeden seçin.";
         }
-        if (isHataKDVTipi()) {
+        if (StokGirisKontrol.isHataComboBox(cbKDVTipi, olKDVTipi)) {
             return "KDV tipini listeden seçin.";
         }
-        if (isHataBirim()) {
+        if (StokGirisKontrol.isHataComboBox(cbBirim, olBirim)) {
             return "Birimi listeden seçin.";
         }
-        if (isHataAdet()) {
+        if (StokGirisKontrol.isHataAdet(spinnerAdet)) {
             return "Adet girişini 0-1000000 arasında yapın.";
         }
         return null;
-    }
-
-    private boolean isHataBarkod() {
-        try {
-            Long.valueOf(tfBarkod.getText());
-            if (tfBarkod.getText().length() == 13) {
-                return false;
-            }
-        } catch (NumberFormatException ex) {
-            System.out.println("ERROR: " + ex.getMessage());
-        }
-        return true;
-    }
-
-    private boolean isHataUrunIsmi() {
-        return tfUrunIsmi.getText().equalsIgnoreCase("");
-    }
-
-    private boolean isHataKategori() {
-        if (cbKategori.getValue() != null) {
-            for (int i = 0; i < olKategori.size(); i++) {
-                if (cbKategori.getValue().toString().toLowerCase().equalsIgnoreCase(olKategori.get(i).toString().toLowerCase())) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    private boolean isHataAlisFiyat() {
-        try {
-            if (Double.valueOf(tfAlisFiyat.getText()) >= 0) {
-                return false;
-            }
-        } catch (NumberFormatException ex) {
-            System.out.println("ERROR: " + ex.getMessage());
-        }
-        return true;
-    }
-
-    private boolean isHataSatisFiyat() {
-        try {
-            if (Double.valueOf(tfSatisFiyat.getText()) >= 0) {
-                return false;
-            }
-        } catch (NumberFormatException ex) {
-            System.out.println("ERROR: " + ex.getMessage());
-        }
-        return true;
-    }
-
-    private boolean isHataKDV() {
-        if (cbKDV.getValue() != null) {
-            for (int i = 0; i < olKDV.size(); i++) {
-                if (cbKDV.getValue().toString().toLowerCase().equalsIgnoreCase(olKDV.get(i).toString().toLowerCase())) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    private boolean isHataKDVTipi() {
-        if (cbKDVTipi.getValue() != null) {
-            for (int i = 0; i < olKDVTipi.size(); i++) {
-                if (cbKDVTipi.getValue().toString().toLowerCase().equalsIgnoreCase(olKDVTipi.get(i).toString().toLowerCase())) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    private boolean isHataBirim() {
-        if (cbBirim.getValue() != null) {
-            for (int i = 0; i < olBirim.size(); i++) {
-                if (cbBirim.getValue().toString().toLowerCase().equalsIgnoreCase(olBirim.get(i).toString().toLowerCase())) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    private boolean isHataAdet() {
-        try {
-            if (spinnerAdet.getValue() >= 0 && spinnerAdet.getValue() <= 1000000) {
-                return false;
-            }
-        } catch (Exception ex) {
-            System.out.println("ERROR: " + ex.getMessage());
-        }
-        return true;
     }
 
     private void karHesapla() {

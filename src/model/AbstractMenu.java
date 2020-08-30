@@ -1,10 +1,13 @@
 package model;
 
 import java.io.IOException;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Effect;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -24,6 +27,8 @@ public abstract class AbstractMenu extends ImageView {
     public AbstractMenu(Menu menu, String image) {
         super(PATH + image + ".png");
         this.menu = menu;
+        setFitWidth(100);
+        setFitHeight(100);
     }
 
     protected void eventHandler(Menu menu) {
@@ -80,7 +85,7 @@ public abstract class AbstractMenu extends ImageView {
 
             primaryStage.setTitle(title);
             primaryStage.getIcons().add(getImage());
-            
+
             primaryStage.show();
         } catch (IOException ex) {
             System.out.println("ERROR: " + ex.getMessage());

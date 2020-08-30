@@ -7,7 +7,7 @@ import javafx.scene.layout.VBox;
  *
  * @author burak
  */
-public class Menu {
+public class Menu{
 
     private static final String PATH = "/resources/drawable/";
     private double screenWidth;
@@ -26,11 +26,6 @@ public class Menu {
         AbstractMenu[] menuList = {new Stok(this), new TeklifSiparis(this),
             new Satis(this), new Kasa(this), new Cari(this),
             new CekSenet(this), new Loglar(this), new EPosta(this)};
-
-        for (int i = 0; i < 8; i++) {
-            menuList[i].setFitHeight(100);
-            menuList[i].setFitWidth(100);
-        }
 
         hBox.setStyle("-fx-background-color: #778899");
         hBox.setPrefWidth(screenWidth);

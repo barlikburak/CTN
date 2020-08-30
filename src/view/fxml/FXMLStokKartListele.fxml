@@ -9,41 +9,52 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FXMLStokKartListeleController">
     <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="775.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="800.0">
             <children>
-                <TableView prefHeight="350.0" prefWidth="777.0" tableMenuButtonVisible="true">
-                    <placeholder>
-                        <Label text="Veri Yok" />
-                    </placeholder>
-                    <columns>
-                        <TableColumn prefWidth="75.0" text="Barkod" />
-                        <TableColumn prefWidth="75.0" text="Ürün Adı" />
-                        <TableColumn prefWidth="75.0" text="Alış F." />
-                        <TableColumn prefWidth="75.0" text="Satış F." />
-                        <TableColumn prefWidth="75.0" text="Kâr Oranı %" visible="false" />
-                        <TableColumn prefWidth="75.0" text="Kâr" visible="false" />
-                        <TableColumn prefWidth="75.0" text="KDV" />
-                        <TableColumn prefWidth="75.0" text="Tipi" />
-                        <TableColumn prefWidth="75.0" text="Kategori" />
-                        <TableColumn prefWidth="75.0" text="Birim" visible="false" />
-                        <TableColumn prefWidth="75.0" text="Adet" visible="false" />
-                    </columns>
-                    <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                    </columnResizePolicy>
-                </TableView>
-                <TextField layoutX="15.0" layoutY="365.0" promptText="BARKOD" />
-                <TextField layoutX="15.0" layoutY="405.0" promptText="ÜRÜN ADI" />
-                <ComboBox layoutX="210.0" layoutY="365.0" prefWidth="150.0" promptText="KDV" />
-                <ComboBox layoutX="210.0" layoutY="405.0" prefWidth="150.0" promptText="KDV TİPİ" />
-                <ComboBox layoutX="380.0" layoutY="365.0" prefWidth="150.0" promptText="KATEGORİ" />
-                <Button layoutX="380.0" layoutY="405.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="147.0" style="-fx-background-color: lightblue;" text="SORGULA" />
-                <Button layoutX="570.0" layoutY="365.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="180.0" style="-fx-background-color: lightgreen;" text="Excel'e Aktar" />
-                <Button layoutX="570.0" layoutY="405.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="180.0" style="-fx-background-color: lightgreen;" text="PDF'e Aktar" />
-            <Line endX="-17.0" endY="86.0" layoutX="570.0" layoutY="364.0" startX="-17.0" startY="-14.0" />
+            <ScrollPane prefHeight="320.0" prefWidth="802.0">
+               <content>
+                      <TableView fx:id="tableView" prefHeight="320.0" prefWidth="1536.0" tableMenuButtonVisible="true">
+                          <placeholder>
+                              <Label text="Veri Yok" />
+                          </placeholder>
+                          <columns>
+                              <TableColumn fx:id="tcBarkod" prefWidth="75.0" text="Barkod" />
+                              <TableColumn fx:id="tcUrunAdi" prefWidth="75.0" text="Ürün Adı" />
+                              <TableColumn fx:id="tcAlisF" maxWidth="4000.0" prefWidth="75.0" text="Alış F." />
+                              <TableColumn fx:id="tcSatisF" maxWidth="4000.0" prefWidth="75.0" text="Satış F." />
+                              <TableColumn fx:id="tcKarOrani" maxWidth="4000.0" prefWidth="75.0" text="Kâr Oranı %" visible="false" />
+                              <TableColumn fx:id="tcKar" maxWidth="4000.0" prefWidth="75.0" text="Kâr" visible="false" />
+                              <TableColumn fx:id="tcKDV" maxWidth="3000.0" prefWidth="75.0" text="KDV" />
+                              <TableColumn fx:id="tcTipi" maxWidth="4000.0" prefWidth="75.0" text="Tipi" />
+                              <TableColumn fx:id="tcKategori" prefWidth="75.0" text="Kategori" />
+                              <TableColumn fx:id="tcBirim" prefWidth="75.0" text="Birim" visible="false" />
+                              <TableColumn fx:id="tcAdet" maxWidth="4000.0" prefWidth="75.0" text="Adet" visible="false" />
+                        <TableColumn fx:id="tcEklenmeTarihi" maxWidth="6000.0" prefWidth="75.0" text="Eklenme Tarihi" />
+                          </columns>
+                          <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                          </columnResizePolicy>
+                      </TableView>
+               </content>
+            </ScrollPane>
+                <TextField fx:id="tfBarkod" layoutX="15.0" layoutY="365.0" promptText="BARKOD" />
+                <TextField fx:id="tfUrunAdi" layoutX="15.0" layoutY="405.0" promptText="ÜRÜN ADI" />
+                <ComboBox fx:id="cbKDV" editable="true" layoutX="210.0" layoutY="365.0" prefWidth="150.0" promptText="KDV" />
+                <ComboBox fx:id="cbKDVTipi" editable="true" layoutX="210.0" layoutY="405.0" prefWidth="150.0" promptText="KDV TİPİ" />
+                <ComboBox fx:id="cbKategori" editable="true" layoutX="380.0" layoutY="365.0" prefWidth="150.0" promptText="KATEGORİ" />
+                <Button fx:id="btnSorgula" layoutX="591.0" layoutY="350.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnSorgula" onMouseExited="#onMouseExitedbtnSorgula" onMousePressed="#onMousePressedbtnSorgula" onMouseReleased="#onMouseReleasedbtnSorgula" prefHeight="26.0" prefWidth="180.0" style="-fx-background-color: lightblue;" text="SORGULA" />
+                <Button fx:id="btnExcel" layoutX="591.0" layoutY="385.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnExcel" onMouseExited="#onMouseExitedbtnExcel" onMousePressed="#onMousePressedbtnExcel" onMouseReleased="#onMouseReleasedbtnExcel" prefHeight="26.0" prefWidth="180.0" style="-fx-background-color: lightgreen;" text="Excel'e Aktar" />
+                <Button fx:id="btnPDF" layoutX="591.0" layoutY="420.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnPDF" onMouseExited="#onMouseExitedbtnPDF" onMousePressed="#onMousePressedbtnPDF" onMouseReleased="#onMouseReleasedbtnPDF" prefHeight="26.0" prefWidth="180.0" style="-fx-background-color: lightgreen;" text="PDF'e Aktar" />
+            <Line endX="-17.0" endY="90.0" layoutX="570.0" layoutY="364.0" startX="-17.0" startY="-44.0" />
+            <Line endX="453.5" layoutX="100.0" layoutY="353.0" startX="-100.0" />
+            <Text layoutX="14.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kayıt Sayısı:" />
+            <Text fx:id="textKayitSayisi" layoutX="101.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+            <Text layoutX="646.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raporlama" />
+            <Line endX="40.0" layoutX="678.0" layoutY="341.0" startX="-35.0" />
             </children>
         </AnchorPane>
     </content>

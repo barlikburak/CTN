@@ -29,7 +29,7 @@ public class Stok extends AbstractMenu {
             start(new Stage(), "FXMLStokKartEkle", "Stok Kart Ekle");
         });
         getvBox().getChildren().get(1).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLStokKartListele");
+            start(new Stage(), "FXMLStokKartListele", "Stok Kart Listesi");
         });
         getvBox().getChildren().get(2).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
             start(new Stage(), "FXMLFaturasizAlis");

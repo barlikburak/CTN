@@ -9,24 +9,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FXMLLoglarController">
     <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="800.0">
             <children>
-                <TableView prefHeight="450.0" prefWidth="800.0" tableMenuButtonVisible="true">
+                <TableView fx:id="tableView" prefHeight="450.0" prefWidth="800.0" tableMenuButtonVisible="true">
                     <placeholder>
                         <Label text="Veri Yok" />
                     </placeholder>
                     <columns>
-                        <TableColumn prefWidth="488.0" text="Açıklama" />
-                        <TableColumn maxWidth="2000.0" prefWidth="200.0" text="Tarih-Saat" />
+                        <TableColumn fx:id="tcAciklama" prefWidth="488.0" text="Açıklama" />
+                        <TableColumn fx:id="tcTarihSaat" maxWidth="2000.0" prefWidth="200.0" text="Tarih-Saat" />
                     </columns>
                     <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                 </TableView>
-            <TextField layoutX="290.0" layoutY="465.0" prefWidth="200.0" />
-            <Button layoutX="500.0" layoutY="465.0" mnemonicParsing="false" style="-fx-background-color: lightblue;" text="Sorgula" />
+            <TextField fx:id="textField" layoutX="290.0" layoutY="465.0" prefWidth="200.0" />
+            <Button fx:id="button" layoutX="500.0" layoutY="465.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredButton" onMouseExited="#onMouseExitedButton" onMousePressed="#onMousePressedButton" onMouseReleased="#onMouseRelasedButton" style="-fx-background-color: lightblue;" text="Sorgula" />
             <Text layoutX="225.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Açıklama" />
             </children>
         </AnchorPane>

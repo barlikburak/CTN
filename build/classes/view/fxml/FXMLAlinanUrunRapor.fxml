@@ -3,8 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -38,7 +38,7 @@
                                 <TableColumn fx:id="tcAraTop" maxWidth="4500.0" prefWidth="75.0" text="AraTop" />
                                 <TableColumn fx:id="tcKDVTop" maxWidth="4500.0" prefWidth="75.0" text="KdvTop" />
                                 <TableColumn fx:id="tcToplam" maxWidth="4500.0" prefWidth="75.0" text="Toplam" />
-                                <TableColumn fx:id="tcDoviz" maxWidth="4500.0" prefWidth="75.0" text="Doviz" />
+                                <TableColumn fx:id="tcDoviz" maxWidth="4500.0" prefWidth="75.0" text="Döviz" />
                                 <TableColumn fx:id="tcDegeri" maxWidth="4500.0" prefWidth="75.0" text="Değeri" />
                                 <TableColumn fx:id="tcCariAdi" maxWidth="5500.0" prefWidth="75.0" text="Cari Adı" />
                                 <TableColumn fx:id="tcIslemTarihi" prefWidth="75.0" text="İşlem Tarihi" />

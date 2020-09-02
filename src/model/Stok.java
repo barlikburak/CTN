@@ -32,13 +32,13 @@ public class Stok extends AbstractMenu {
             start(new Stage(), "FXMLStokKartListele", "Stok Kart Listesi");
         });
         getvBox().getChildren().get(2).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLFaturasizAlis");
+            start(new Stage(), "FXMLFaturasizAlis", "Faturasız Alış");
         });
         getvBox().getChildren().get(3).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLFaturaliAlis");
+            start(new Stage(), "FXMLFaturaliAlis", "Faturalı Alış");
         });
         getvBox().getChildren().get(4).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLAlisIade");
+            start(new Stage(), "FXMLAlisIade", "Alış İade");
         });
         getvBox().getChildren().get(5).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
             start(new Stage(), "FXMLTopluFisFiyatGuncelle", "Toplu Fiyat Güncelle");

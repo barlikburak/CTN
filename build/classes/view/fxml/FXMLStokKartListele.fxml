@@ -23,16 +23,16 @@
                           </placeholder>
                           <columns>
                               <TableColumn fx:id="tcBarkod" prefWidth="75.0" text="Barkod" />
-                              <TableColumn fx:id="tcUrunAdi" prefWidth="75.0" text="Ürün Adı" />
+                              <TableColumn fx:id="tcUrunAdi" maxWidth="5500.0" prefWidth="75.0" text="Ürün Adı" />
                               <TableColumn fx:id="tcAlisF" maxWidth="4000.0" prefWidth="75.0" text="Alış F." />
                               <TableColumn fx:id="tcSatisF" maxWidth="4000.0" prefWidth="75.0" text="Satış F." />
-                              <TableColumn fx:id="tcKarOrani" maxWidth="4000.0" prefWidth="75.0" text="Kâr Oranı %" visible="false" />
+                              <TableColumn fx:id="tcKarOrani" maxWidth="3000.0" prefWidth="75.0" text="Kâr Oranı %" visible="false" />
                               <TableColumn fx:id="tcKar" maxWidth="4000.0" prefWidth="75.0" text="Kâr" visible="false" />
                               <TableColumn fx:id="tcKDV" maxWidth="3000.0" prefWidth="75.0" text="KDV" />
-                              <TableColumn fx:id="tcTipi" maxWidth="4000.0" prefWidth="75.0" text="Tipi" />
+                              <TableColumn fx:id="tcTipi" maxWidth="3500.0" prefWidth="75.0" text="Tipi" />
                               <TableColumn fx:id="tcKategori" prefWidth="75.0" text="Kategori" />
-                              <TableColumn fx:id="tcBirim" prefWidth="75.0" text="Birim" visible="false" />
-                              <TableColumn fx:id="tcAdet" maxWidth="4000.0" prefWidth="75.0" text="Adet" visible="false" />
+                              <TableColumn fx:id="tcBirim" maxWidth="4000.0" prefWidth="75.0" text="Birim" visible="false" />
+                              <TableColumn fx:id="tcAdet" maxWidth="3000.0" prefWidth="75.0" text="Adet" visible="false" />
                         <TableColumn fx:id="tcEklenmeTarihi" maxWidth="6000.0" prefWidth="75.0" text="Eklenme Tarihi" />
                           </columns>
                           <columnResizePolicy>

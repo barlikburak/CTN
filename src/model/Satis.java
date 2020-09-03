@@ -1,6 +1,5 @@
 package model;
 
-import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -11,7 +10,7 @@ import javafx.stage.Stage;
 public class Satis extends AbstractMenu {
 
     public Satis(Menu menu) {
-        super(menu,"satis");
+        super(menu, "satis");
         altkategori = new String[7];
         altkategori[0] = "pesin-satis.png";
         altkategori[1] = "faturasiz-satis.png";
@@ -22,23 +21,23 @@ public class Satis extends AbstractMenu {
         altkategori[6] = "satis-urun-rapor.png";
         eventHandler(menu);
     }
-    
+
     @Override
     public void altKategoriEventHandler() {
         getvBox().getChildren().get(0).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLPesinSatis");
+            start(new Stage(), "FXMLPesinSatis", "Peşin Satış");
         });
         getvBox().getChildren().get(1).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLFaturasizSatis");
+            start(new Stage(), "FXMLFaturasizSatis", "Faturasız Satış");
         });
         getvBox().getChildren().get(2).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLFaturaliSatis");
+            start(new Stage(), "FXMLFaturaliSatis", "Faturalı Satış");
         });
         getvBox().getChildren().get(3).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLTopluFiyatGuncelle");
+            start(new Stage(), "FXMLTopluFiyatGuncelle", "Toplu Fiş Fiyat Güncelle");
         });
         getvBox().getChildren().get(4).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLSatisIade");
+            start(new Stage(), "FXMLSatisIade", "Satış İade");
         });
         getvBox().getChildren().get(5).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
             start(new Stage(), "FXMLSatisRapor");

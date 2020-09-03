@@ -1,58 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FXMLSatisIadeController">
     <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="1022.0">
             <children>
-                <TableView layoutY="175.0" prefHeight="250.0" prefWidth="1024.0" tableMenuButtonVisible="true">
-                    <placeholder>
-                        <Label text="Veri Yok" />
-                    </placeholder>
-                    <columns>
-                        <TableColumn prefWidth="75.0" text="Barkod" />
-                        <TableColumn prefWidth="119.0" text="Ürün İsmi" />
-                        <TableColumn prefWidth="75.0" text="Miktarı" />
-                        <TableColumn prefWidth="75.0" text="Birim" />
-                        <TableColumn prefWidth="75.0" text="Birim F." />
-                        <TableColumn prefWidth="75.0" text="İsk1" />
-                        <TableColumn prefWidth="146.0" text="\%KDV" />
-                        <TableColumn prefWidth="40.0" text="Tipi" />
-                        <TableColumn prefWidth="118.0" text="AraTop" />
-                        <TableColumn prefWidth="68.0" text="TopKDV" />
-                        <TableColumn prefWidth="83.0" text="Tutar" />
-                    </columns>
-                    <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                    </columnResizePolicy>
-                </TableView>
+            <ScrollPane layoutY="175.0" prefHeight="250.0" prefWidth="1024.0">
+               <content>
+                      <TableView fx:id="tableView" prefHeight="232.0" prefWidth="1536.0" tableMenuButtonVisible="true">
+                          <placeholder>
+                              <Label text="Veri Yok" />
+                          </placeholder>
+                          <columns>
+                              <TableColumn fx:id="tcBarkod" prefWidth="75.0" text="Barkod" />
+                              <TableColumn fx:id="tcUrunIsmi" maxWidth="5500.0" prefWidth="119.0" text="Ürün İsmi" />
+                              <TableColumn fx:id="tcMiktari" maxWidth="3000.0" prefWidth="75.0" text="Miktarı" />
+                              <TableColumn fx:id="tcBirim" maxWidth="4000.0" prefWidth="75.0" text="Birim" />
+                              <TableColumn fx:id="tcBirimF" maxWidth="4000.0" prefWidth="75.0" text="Birim F." />
+                              <TableColumn fx:id="tcIsk1" maxWidth="4000.0" prefWidth="75.0" text="İsk1" />
+                              <TableColumn fx:id="tcKDV" maxWidth="3000.0" prefWidth="146.0" text="\%KDV" />
+                              <TableColumn fx:id="tcKDVTipi" maxWidth="3500.0" prefWidth="40.0" text="Tipi" />
+                              <TableColumn fx:id="tcAraTop" maxWidth="4000.0" prefWidth="118.0" text="AraTop" />
+                              <TableColumn fx:id="tcTopKDv" maxWidth="4000.0" prefWidth="68.0" text="TopKDV" />
+                              <TableColumn fx:id="tcTutar" maxWidth="4000.0" prefWidth="83.0" text="Tutar" />
+                          </columns>
+                          <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                          </columnResizePolicy>
+                      </TableView>
+               </content>
+            </ScrollPane>
                 <Text layoutX="5.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="İşlem Tarihi" />
                 <Text layoutX="5.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Açıklama" />
-                <TextArea layoutX="85.0" layoutY="484.0" prefHeight="64.0" prefWidth="206.0" />
-                <TextField alignment="CENTER" editable="false" layoutX="85.0" layoutY="440.0" prefHeight="26.0" prefWidth="206.0" promptText="16.08.2020 14:45" />
-                <Button layoutX="240.0" layoutY="558.0" mnemonicParsing="false" text="İade">
-                    <font>
-                        <Font name="System Bold" size="13.0" />
-                    </font>
-                </Button>
-                <TextField alignment="CENTER_RIGHT" layoutX="900.0" layoutY="430.0" prefHeight="20.0" prefWidth="75.0" style="-fx-background-color: red; -fx-text-fill: white;" text="0,00" />
-                <TextField alignment="CENTER_RIGHT" layoutX="900.0" layoutY="460.0" prefHeight="20.0" prefWidth="75.0" style="-fx-background-color: red; -fx-text-fill: white;" text="0,00" />
-                <TextField alignment="CENTER_RIGHT" layoutX="900.0" layoutY="490.0" prefHeight="20.0" prefWidth="75.0" text="0,00" />
-                <TextField alignment="CENTER_RIGHT" layoutX="824.0" layoutY="550.0" prefHeight="33.0" prefWidth="151.0" style="-fx-background-color: red; -fx-text-fill: white;" text="0,00" />
-                <TextField alignment="CENTER_RIGHT" layoutX="900.0" layoutY="520.0" prefHeight="20.0" prefWidth="75.0" text="0,00" />
+                <TextArea fx:id="taAciklama" layoutX="85.0" layoutY="484.0" prefHeight="64.0" prefWidth="206.0" />
+                <TextField fx:id="tfIslemTarihi" alignment="CENTER" editable="false" layoutX="85.0" layoutY="440.0" prefHeight="26.0" prefWidth="206.0" promptText="16.08.2020  14:45" style="-fx-background-radius: 10;" />
+                <TextField fx:id="tfToplam" alignment="CENTER_RIGHT" layoutX="900.0" layoutY="430.0" prefHeight="20.0" prefWidth="75.0" style="-fx-background-color: red; -fx-text-fill: white;" text="0,00" />
+                <TextField fx:id="tfTopKDV" alignment="CENTER_RIGHT" layoutX="900.0" layoutY="460.0" prefHeight="20.0" prefWidth="75.0" style="-fx-background-color: red; -fx-text-fill: white;" text="0,00" />
+                <TextField fx:id="tfIndirim" alignment="CENTER_RIGHT" layoutX="900.0" layoutY="490.0" prefHeight="20.0" prefWidth="75.0" text="0,00" />
+                <TextField fx:id="tfGenelTop" alignment="CENTER_RIGHT" layoutX="824.0" layoutY="550.0" prefHeight="33.0" prefWidth="151.0" style="-fx-background-color: red; -fx-text-fill: white;" text="0,00">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+                <TextField fx:id="tfIscilik" alignment="CENTER_RIGHT" layoutX="900.0" layoutY="520.0" prefHeight="20.0" prefWidth="75.0" text="0,00" />
                 <Text fill="RED" layoutX="846.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toplam" />
                 <Text fill="RED" layoutX="846.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TopKdv" />
                 <Text fill="RED" layoutX="846.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="İndirim" />
@@ -72,45 +78,144 @@
                     </font>
                 </Text>
                 <Line endX="-100.0" endY="120.0" layoutX="410.0" layoutY="470.0" startX="-100.0" startY="-40.0" />
-                <ComboBox layoutX="320.0" layoutY="460.0" prefHeight="26.0" prefWidth="200.0" />
-                <TextField alignment="CENTER_RIGHT" layoutX="400.0" layoutY="500.0" prefHeight="26.0" prefWidth="120.0" text="10" />
-                <TextField alignment="CENTER_RIGHT" layoutX="400.0" layoutY="530.0" prefHeight="26.0" prefWidth="90.0" text="0" />
+                <ComboBox fx:id="cbPersonel" editable="true" layoutX="320.0" layoutY="460.0" prefHeight="26.0" prefWidth="200.0" promptText="personel seçiniz" />
+                <TextField fx:id="tfYuzde" alignment="CENTER_RIGHT" layoutX="400.0" layoutY="500.0" prefHeight="26.0" prefWidth="120.0" style="-fx-background-radius: 10;" text="10" />
+                <TextField fx:id="tfPrimGiris" alignment="CENTER_RIGHT" layoutX="400.0" layoutY="530.0" prefHeight="26.0" prefWidth="90.0" style="-fx-background-radius: 10;" text="0" />
                 <Text fill="RED" layoutX="320.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personel" />
                 <Text fill="RED" layoutX="320.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yüzde %" />
                 <Text fill="RED" layoutX="320.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prim Girişi" />
                 <Text layoutX="500.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TL" />
-                <RadioButton layoutX="320.0" layoutY="566.0" mnemonicParsing="false" text="KDV'leri 0 olarak gir" />
-            <Text layoutX="778.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANLI STOK" />
-            <TextField alignment="CENTER_RIGHT" layoutX="775.0" layoutY="43.0" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: red; -fx-text-fill: white;" text="0" />
-            <TextField layoutX="875.0" layoutY="43.0" prefWidth="125.0" style="-fx-background-color: red;" />
-            <Button layoutX="775.0" layoutY="84.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: lightblue;" text="Fatura Ayarları">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </Button>
-            <Button layoutX="878.0" layoutY="84.0" mnemonicParsing="false" style="-fx-background-color: lightblue;" text="Ayarlar" />
-            <Button layoutX="946.0" layoutY="84.0" mnemonicParsing="false" style="-fx-background-color: lightblue;" text="Yazdır" />
-            <TextField layoutX="525.0" layoutY="40.0" />
-            <ComboBox layoutX="525.0" layoutY="80.0" prefHeight="26.0" prefWidth="171.0" />
-            <ScrollPane layoutX="10.0" layoutY="10.0" prefHeight="130.0" prefWidth="400.0">
+                <Text layoutX="778.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANLI STOK" />
+                <TextField fx:id="tfCanliStokBirimF" alignment="CENTER_RIGHT" editable="false" layoutX="775.0" layoutY="43.0" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: red; -fx-text-fill: white;" text="0" />
+                <TextField fx:id="tfCanliStokBirim" editable="false" layoutX="875.0" layoutY="43.0" prefWidth="125.0" style="-fx-background-color: red;" />
+                <TextField fx:id="tfBarkod" layoutX="525.0" layoutY="40.0" style="-fx-background-radius: 10;" />
+                <ComboBox fx:id="cbUrunAdi" editable="true" layoutX="525.0" layoutY="80.0" prefHeight="26.0" prefWidth="171.0" promptText="ürün seçiniz" />
+                <Text fill="RED" layoutX="450.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ürün Adı" />
+                <Text fill="RED" layoutX="450.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barkod" />
+                <Text layoutX="472.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ürün Sorgulama" />
+                <TabPane layoutX="10.0" layoutY="10.0" prefHeight="160.0" prefWidth="415.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab onSelectionChanged="#onSelectionChangedtabCarisizIslem" text="Carisiz İşlem">
+                            <content>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Label layoutX="116.0" layoutY="49.0" text="CARİSİZ İŞLEM">
+                                            <font>
+                                                <Font size="23.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab onSelectionChanged="#onSelectionChangedtabCariSecimi" text="Cari Seçimi">
+                            <content>
+                                <ScrollPane layoutX="10.0" layoutY="10.0" prefHeight="130.0" prefWidth="420.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="205.0" prefWidth="398.0">
+                                            <children>
+                                                <ComboBox fx:id="cbCariSec" editable="true" layoutX="80.0" layoutY="10.0" prefHeight="26.0" prefWidth="314.0" />
+                                                <Text layoutX="5.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Seç" />
+                                                <Text layoutX="5.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adres Seç" />
+                                                <Text layoutX="5.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adres" />
+                                                <ComboBox fx:id="cbAdresSec" editable="true" layoutX="80.0" layoutY="42.0" prefHeight="26.0" prefWidth="80.0" />
+                                                <Text layoutX="165.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V.D." />
+                                                <Text layoutX="280.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V.No" />
+                                                <TextField fx:id="tfVDCariSecim" layoutX="195.0" layoutY="42.0" prefWidth="80.0" />
+                                                <TextField fx:id="tfVNoCariSecim" layoutX="315.0" layoutY="42.0" prefWidth="80.0" />
+                                                <TextArea fx:id="taAdresCariSecimi" layoutX="80.0" layoutY="75.0" prefHeight="60.0" prefWidth="313.0" />
+                                                <Text layoutX="5.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eski Bakiye" />
+                                                <Text layoutX="5.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kart Puanı" />
+                                                <TextField fx:id="tfEskiBakiye" alignment="CENTER_RIGHT" layoutX="93.0" layoutY="145.0" prefWidth="80.0" text="0" />
+                                                <TextField fx:id="tfKartPuani" alignment="CENTER_RIGHT" layoutX="93.0" layoutY="175.0" prefWidth="80.0" text="0" />
+                                                <Text layoutX="200.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Limiti" />
+                                                <Text layoutX="200.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kart Bakiyesi" />
+                                                <TextField fx:id="tfCariLimiti" alignment="CENTER_RIGHT" layoutX="300.0" layoutY="145.0" prefWidth="80.0" text="0" />
+                                                <TextField fx:id="tfKartBakiyesi" alignment="CENTER_RIGHT" layoutX="300.0" layoutY="175.0" prefWidth="80.0" text="0" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                            </content>
+                        </Tab>
+                        <Tab onSelectionChanged="#onSelectionChangedtabCariTanimlama" text="Cari Tanımlama">
+                            <content>
+                                <ScrollPane prefHeight="130.0" prefWidth="420.0">
+                           <content>
+                              <AnchorPane prefHeight="215.0" prefWidth="398.0">
+                                 <children>
+                                    <Text layoutX="5.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Adı" />
+                                    <Text layoutX="5.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V.D." />
+                                    <Text layoutX="5.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tel" />
+                                    <Text layoutX="5.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bölge" />
+                                    <Text layoutX="5.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adres" />
+                                    <TextField fx:id="tfCariAdi" layoutX="65.0" layoutY="7.0" prefWidth="120.0" />
+                                    <TextField fx:id="tfVDCariTanimlama" layoutX="65.0" layoutY="37.0" prefHeight="26.0" prefWidth="120.0" />
+                                    <TextField fx:id="tfTel" layoutX="65.0" layoutY="67.0" prefHeight="26.0" prefWidth="120.0" promptText="Başında 0 ile" />
+                                    <TextField fx:id="tfBolge" layoutX="65.0" layoutY="97.0" prefHeight="26.0" prefWidth="325.0" />
+                                    <TextField fx:id="tfSoyadUnvan" layoutX="270.0" layoutY="7.0" prefWidth="120.0" />
+                                    <TextField fx:id="tfEMail" layoutX="270.0" layoutY="67.0" prefWidth="120.0" />
+                                    <TextField fx:id="tfVNoCariTanimlama" layoutX="270.0" layoutY="37.0" prefWidth="120.0" />
+                                    <Text layoutX="189.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soyadı/Unvanı">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="189.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vergi No" />
+                                    <Text layoutX="189.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail" />
+                                    <TextArea fx:id="taAdresCariTanimlama" layoutX="65.0" layoutY="130.0" prefHeight="75.0" prefWidth="325.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content></ScrollPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+                <Separator layoutX="10.0" layoutY="167.0" prefHeight="5.0" prefWidth="415.0" />
+                <Separator layoutX="423.0" layoutY="43.0" orientation="VERTICAL" prefHeight="125.0" prefWidth="5.0" />
+                <Separator layoutX="9.0" layoutY="43.0" orientation="VERTICAL" prefHeight="125.0" prefWidth="5.0" />
+            <CheckBox fx:id="checkKDV0Gir" layoutX="320.0" layoutY="565.0" mnemonicParsing="false" text="KDV'leri 0 olarak gir" />
+            <Button layoutX="895.0" layoutY="140.0" mnemonicParsing="false" onAction="#onMouseActionbtnPDFAktar" prefWidth="100.0" text="PDF'e Aktar" />
+            <TitledPane animated="false" expanded="false" layoutX="791.0" layoutY="110.0" text="Ayarlar">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="183.0">
+                           <children>
+                              <CheckBox fx:id="checkBarkod" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" selected="true" text="Barkod" />
+                              <CheckBox fx:id="checkUrunIsmi" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" selected="true" text="Ürün İsmi" />
+                              <CheckBox fx:id="checkMiktari" layoutX="14.0" layoutY="75.0" mnemonicParsing="false" selected="true" text="Miktarı" />
+                              <CheckBox fx:id="checkBirim" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" selected="true" text="Birim" />
+                              <CheckBox fx:id="checkBirimF" layoutX="14.0" layoutY="125.0" mnemonicParsing="false" selected="true" text="Birim F." />
+                              <CheckBox fx:id="checkIsk1" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" selected="true" text="İsk1" />
+                              <CheckBox fx:id="checkKDV" layoutX="14.0" layoutY="175.0" mnemonicParsing="false" selected="true" text="\%KDV" />
+                              <CheckBox fx:id="checkKDVTipi" layoutX="14.0" layoutY="200.0" mnemonicParsing="false" selected="true" text="Tipi" />
+                              <CheckBox fx:id="checkAraTop" layoutX="14.0" layoutY="225.0" mnemonicParsing="false" selected="true" text="AraTop" />
+                              <CheckBox fx:id="checkTopKDV" layoutX="14.0" layoutY="250.0" mnemonicParsing="false" selected="true" text="TopKDV" />
+                              <CheckBox fx:id="checkTutar" layoutX="14.0" layoutY="275.0" mnemonicParsing="false" selected="true" text="Tutar" />
+                              <Text layoutX="10.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Listede Gösterilecek Alanlar" underline="true">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+            <TitledPane fx:id="tpCiktiAyar" animated="false" expanded="false" layoutX="791.0" layoutY="80.0" text="Fatura Ayarları">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="128.0" prefWidth="398.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="93.0" layoutY="47.0" text="CARİSİZ İŞLEM">
-                           <font>
-                              <Font size="29.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
+                        <TextField fx:id="tfFaturaNo" editable="false" layoutX="15.0" layoutY="10.0" promptText="Fatura No" />
+                        <TextField fx:id="tfIrsaliyeNo" editable="false" layoutX="15.0" layoutY="45.0" promptText="İrsaliye No" />
+                        <TextArea fx:id="taFaturaCiktiAciklama" layoutX="15.0" layoutY="115.0" prefHeight="100.0" prefWidth="171.0" promptText="Fatura/Çıktı Açıklaması" />
+                        <TextField fx:id="tfBelgeNo" layoutX="15.0" layoutY="80.0" promptText="Belge No" />
+                     </children></AnchorPane>
               </content>
-            </ScrollPane>
-            <Button layoutX="10.0" layoutY="144.0" mnemonicParsing="false" style="-fx-background-color: #FFEBCD;" text="Carisiz İşlem" />
-            <Text fill="RED" layoutX="450.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ürün Adı" />
-            <Text fill="RED" layoutX="450.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barkod" />
-            <Text layoutX="472.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ürün Sorgulama" />
-            <Button layoutX="111.0" layoutY="144.0" mnemonicParsing="false" text="Cari Seçimi" />
-            <Button layoutX="203.0" layoutY="144.0" mnemonicParsing="false" text="Cari Tanımlama" />
+            </TitledPane>
+            <Button layoutX="244.0" layoutY="560.0" mnemonicParsing="false" onAction="#onMouseActionbtnIade" text="İade" />
             </children>
         </AnchorPane>
     </content>

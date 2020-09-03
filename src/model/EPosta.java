@@ -20,10 +20,10 @@ public class EPosta extends AbstractMenu {
     @Override
     public void altKategoriEventHandler() {
         getvBox().getChildren().get(0).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLEPostaGonder");
+            start(new Stage(), "FXMLEPostaGonder", "E-Posta Gönder");
         });
         getvBox().getChildren().get(1).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLTopluEPosta");
+            start(new Stage(), "FXMLTopluEPosta", "Toplu E-Posta");
         });
     }
 

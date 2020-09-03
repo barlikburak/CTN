@@ -22,16 +22,16 @@ public class TeklifSiparis extends AbstractMenu {
     @Override
     public void altKategoriEventHandler() {
         getvBox().getChildren().get(0).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLYeniTeklif");
+            start(new Stage(), "FXMLYeniTeklif", "Yeni Teklif");
         });
         getvBox().getChildren().get(1).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLYeniSiparis");
+            start(new Stage(), "FXMLYeniSiparis", "Yeni Sipariş");
         });
         getvBox().getChildren().get(2).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLTeklifSiparisRapor");
+            start(new Stage(), "FXMLTeklifSiparisRapor","Teklif-Sipariş Raporları");
         });
         getvBox().getChildren().get(3).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLTeklifSiparisUrunRapor");
+            start(new Stage(), "FXMLTeklifSiparisUrunRapor","Teklif-Sipariş Ürün Ayrıntı Raporları");
         });
     }
 

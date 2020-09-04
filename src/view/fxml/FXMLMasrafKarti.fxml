@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FXMLMasrafKartiController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="425.0" prefWidth="350.0">
+         <children>
+            <ListView fx:id="listView" prefHeight="350.0" prefWidth="350.0" />
+            <Line endX="249.0" layoutX="101.0" layoutY="380.0" startX="-100.0" />
+            <Text layoutX="9.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kayıt Sayısı:" />
+            <Text fx:id="txtKayitSayisi" layoutX="95.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+            <Text layoutX="9.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masraf Kartı Adı" />
+            <TextField fx:id="tfMasrafKartiAdi" layoutX="120.0" layoutY="390.0" prefWidth="130.0" />
+            <Button fx:id="btnSil" layoutX="310.0" layoutY="390.0" mnemonicParsing="false" onAction="#onMouseActionbtnSil" onMouseEntered="#onMouseEnteredbtnSil" onMouseExited="#onMouseExitedbtnSil" style="-fx-background-color: red;" text="Sil" textFill="WHITE" />
+            <Button fx:id="btnEkle" layoutX="260.0" layoutY="390.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnEkle" onMouseExited="#onMouseExitedbtnEkle" onMousePressed="#onMousePressedbtnEkle" onMouseReleased="#onMouseReleasedbtnEkle" style="-fx-background-color: blue;" text="Ekle" textFill="WHITE" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

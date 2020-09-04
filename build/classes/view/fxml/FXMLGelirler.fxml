@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0" prefWidth="335.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FXMLGelirlerController">
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="333.0">
          <children>
@@ -16,11 +16,11 @@
             <Text layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutar" />
             <Text layoutX="14.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="İşlem Tarihi" />
             <Text layoutX="14.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Açıklama" />
-            <Button layoutX="246.0" layoutY="210.0" mnemonicParsing="false" text="Kaydet" />
-            <TextField layoutX="110.0" layoutY="9.0" prefWidth="200.0" />
-            <TextField alignment="CENTER_RIGHT" layoutX="110.0" layoutY="39.0" prefWidth="200.0" text="0" />
-            <DatePicker layoutX="110.0" layoutY="69.0" prefWidth="200.0" />
-            <TextArea layoutX="110.0" layoutY="100.0" prefHeight="100.0" prefWidth="200.0" />
+            <Button fx:id="btnKaydet" layoutX="246.0" layoutY="210.0" mnemonicParsing="false" onAction="#onMouseActionbtnKaydet" onMouseEntered="#onMouseEnteredbtnKaydet" onMouseExited="#onMouseExitedtnKaydet" text="Kaydet" />
+            <TextField fx:id="tfGelirAdi" layoutX="110.0" layoutY="9.0" prefWidth="200.0" />
+            <TextField fx:id="tfTutar" alignment="CENTER_RIGHT" layoutX="110.0" layoutY="39.0" prefWidth="200.0" text="0" />
+            <DatePicker fx:id="dpIslemTarihi" layoutX="110.0" layoutY="69.0" prefWidth="200.0" />
+            <TextArea fx:id="taAciklama" layoutX="110.0" layoutY="100.0" prefHeight="100.0" prefWidth="200.0" />
          </children></AnchorPane>
   </content>
 </ScrollPane>

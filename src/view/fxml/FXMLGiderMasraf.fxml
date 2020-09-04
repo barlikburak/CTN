@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="352.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FXMLGiderMasrafController">
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="310.0" prefWidth="350.0">
          <children>
@@ -21,18 +21,18 @@
             <Text layoutX="14.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="İşlem Tarihi" />
             <Text layoutX="14.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masraf Tipi" />
             <Text layoutX="14.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Açıklama" />
-            <Button layoutX="272.0" layoutY="270.0" mnemonicParsing="false" text="Kaydet" />
-            <ComboBox editable="true" layoutX="146.0" layoutY="9.0" prefHeight="26.0" prefWidth="160.0" />
-            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="310.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="btnKaydet" layoutX="272.0" layoutY="270.0" mnemonicParsing="false" onAction="#onMouseActionbtnKaydet" onMouseEntered="#onMouseEnteredbtnKaydet" onMouseExited="#onMouseExitedbtnKaydet" text="Kaydet" />
+            <ComboBox fx:id="cbMasrafKartSecim" editable="true" layoutX="146.0" layoutY="9.0" prefHeight="26.0" prefWidth="160.0" />
+            <ImageView fx:id="ivPlus" fitHeight="26.0" fitWidth="26.0" layoutX="310.0" layoutY="9.0" onMouseEntered="#onMouseEnteredivPlus" onMouseExited="#onMouseExitedivPlus" onMousePressed="#onMousePressedivPlus" onMouseReleased="#onMouseReleasedivPlus" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../resources/drawable/plus.png" />
                </image>
             </ImageView>
-            <TextField alignment="CENTER_RIGHT" layoutX="146.0" layoutY="39.0" prefHeight="26.0" prefWidth="190.0" text="0" />
-            <TextField layoutX="146.0" layoutY="69.0" prefHeight="26.0" prefWidth="190.0" />
-            <DatePicker layoutX="146.0" layoutY="99.0" prefWidth="190.0" />
-            <ComboBox editable="true" layoutX="146.0" layoutY="129.0" prefWidth="190.0" />
-            <TextArea layoutX="91.0" layoutY="160.0" prefHeight="100.0" prefWidth="245.0" />
+            <TextField fx:id="tfTutar" alignment="CENTER_RIGHT" layoutX="146.0" layoutY="39.0" prefHeight="26.0" prefWidth="190.0" text="0" />
+            <TextField fx:id="tfBelgeNo" layoutX="146.0" layoutY="69.0" prefHeight="26.0" prefWidth="190.0" />
+            <DatePicker fx:id="dpIslemTarihi" layoutX="146.0" layoutY="99.0" prefWidth="190.0" />
+            <ComboBox fx:id="cbMasrafTipi" editable="true" layoutX="146.0" layoutY="129.0" prefWidth="190.0" />
+            <TextArea fx:id="taAciklama" layoutX="91.0" layoutY="160.0" prefHeight="100.0" prefWidth="245.0" />
          </children></AnchorPane>
   </content>
 </ScrollPane>

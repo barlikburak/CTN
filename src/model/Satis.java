@@ -40,10 +40,10 @@ public class Satis extends AbstractMenu {
             start(new Stage(), "FXMLSatisIade", "Satış İade");
         });
         getvBox().getChildren().get(5).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLSatisRapor");
+            start(new Stage(), "FXMLSatisRapor", "Satış Raporları");
         });
         getvBox().getChildren().get(6).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLSatisUrunRapor");
+            start(new Stage(), "FXMLSatisUrunRapor", "Ürün Satış Raporları");
         });
     }
 

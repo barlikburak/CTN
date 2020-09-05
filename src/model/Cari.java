@@ -26,28 +26,28 @@ public class Cari extends AbstractMenu {
     @Override
     public void altKategoriEventHandler() {
         getvBox().getChildren().get(0).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLCariIslemler");
+            start(new Stage(), "FXMLCariIslemler", "Cari Kart İşlemleri");
         });
         getvBox().getChildren().get(1).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLCariKartEkle");
+            start(new Stage(), "FXMLCariKartEkle", "Yeni Cari Ekle");
         });
         getvBox().getChildren().get(2).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLCariListesi");
+            start(new Stage(), "FXMLCariListesi", "Cari Listesi");
         });
         getvBox().getChildren().get(3).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLCariEkstreRapor");
+            start(new Stage(), "FXMLCariEkstreRapor", "Cari Hesap Ekstresi");
         });
         getvBox().getChildren().get(4).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLDetayliCariEkstreRapor");
+            start(new Stage(), "FXMLDetayliCariEkstreRapor", "Detaylı Cari Ekstre Raporu");
         });
         getvBox().getChildren().get(5).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLTahsilatOdemeRapor");
+            start(new Stage(), "FXMLTahsilatOdemeRapor", "Tahsilat Ödeme Raporu");
         });
         getvBox().getChildren().get(6).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLAlacakBorcRapor");
+            start(new Stage(), "FXMLAlacakBorcRapor", "Alacak Borç Raporları");
         });
         getvBox().getChildren().get(7).addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent event) -> {
-            start(new Stage(), "FXMLGunlukIzleme");
+            start(new Stage(), "FXMLGunlukIzleme", "Günlük İzleme Ekranı");
         });
     }
 

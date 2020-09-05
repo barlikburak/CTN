@@ -9,34 +9,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FXMLGunlukIzlemeController">
     <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="1020.0">
             <children>
-                <TableView layoutY="75.0" prefHeight="375.0" prefWidth="1024.0" tableMenuButtonVisible="true">
+                <TableView fx:id="tableView" layoutY="75.0" prefHeight="375.0" prefWidth="1024.0" tableMenuButtonVisible="true">
                     <placeholder>
                         <Label text="Veri Yok" />
                     </placeholder>
                     <columns>
-                        <TableColumn prefWidth="75.0" text="Adı" />
-                        <TableColumn prefWidth="75.0" text="Soyadı" />
-                        <TableColumn prefWidth="75.0" text="İşlem Türü" />
-                        <TableColumn prefWidth="75.0" text="Vade Tarihi" />
-                        <TableColumn prefWidth="75.0" text="Alacak" />
-                        <TableColumn prefWidth="75.0" text="E-Posta" />
+                        <TableColumn fx:id="tcAdi" maxWidth="4500.0" prefWidth="75.0" text="Adı" />
+                        <TableColumn fx:id="tcSoyadi" maxWidth="4500.0" prefWidth="75.0" text="Soyadı" />
+                        <TableColumn fx:id="tcIslemTuru" maxWidth="4000.0" prefWidth="75.0" text="İşlem Türü" />
+                        <TableColumn fx:id="tcVadeTarihi" maxWidth="4000.0" prefWidth="75.0" text="Vade Tarihi" />
+                        <TableColumn fx:id="tcAlacak" maxWidth="4000.0" prefWidth="75.0" text="Alacak" />
+                        <TableColumn fx:id="tcEPosta" maxWidth="6000.0" prefWidth="75.0" text="E-Posta" />
                     </columns>
                     <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                 </TableView>
-                <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Vadesi Geçenler" />
-                <CheckBox layoutX="14.0" layoutY="44.0" mnemonicParsing="false" text="Tarih Aralığı" />
-                <DatePicker layoutX="153.0" layoutY="40.0" prefWidth="120.0" />
-                <DatePicker layoutX="292.0" layoutY="40.0" prefWidth="120.0" />
+                <CheckBox fx:id="checkVadesiGecenler" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Vadesi Geçenler" />
+                <CheckBox fx:id="checkTarihAraligi" layoutX="14.0" layoutY="44.0" mnemonicParsing="false" text="Tarih Aralığı" />
+                <DatePicker fx:id="dpBas" layoutX="153.0" layoutY="40.0" prefWidth="120.0" />
+                <DatePicker fx:id="dpSon" layoutX="292.0" layoutY="40.0" prefWidth="120.0" />
                 <Text layoutX="280.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
-                <Label layoutX="14.0" layoutY="465.0" text="Toplam Kayıt Sayısı: 0" />
-                <Label layoutX="470.0" layoutY="465.0" text="0 TL" textFill="RED" />
+                <Label layoutX="14.0" layoutY="465.0" text="Toplam Kayıt Sayısı:" />
                 <Text layoutX="362.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toplam Alacak:" />
+                <Text fx:id="txtToplamKayitSayisi" layoutX="151.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+            <Text fx:id="txtToplamAlacak" fill="RED" layoutX="467.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 TL" />
             </children>
         </AnchorPane>
     </content>

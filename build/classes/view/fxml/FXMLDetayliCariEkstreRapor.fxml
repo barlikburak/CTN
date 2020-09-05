@@ -10,35 +10,35 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FXMLDetayliCariEkstreRaporController">
     <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="400.0">
             <children>
-                <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Tüm Tarihler" />
-                <RadioButton layoutX="14.0" layoutY="44.0" mnemonicParsing="false" text="Tarih Aralığı" />
-                <DatePicker layoutX="124.0" layoutY="40.0" prefWidth="120.0" />
-                <DatePicker layoutX="266.0" layoutY="40.0" prefWidth="120.0" />
+                <RadioButton fx:id="rbTumTarihler" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" selected="true" text="Tüm Tarihler" />
+                <RadioButton fx:id="rbTarihAraligi" layoutX="14.0" layoutY="44.0" mnemonicParsing="false" text="Tarih Aralığı" />
+                <DatePicker fx:id="dpBas" layoutX="124.0" layoutY="40.0" prefWidth="120.0" />
+                <DatePicker fx:id="dpSon" layoutX="266.0" layoutY="40.0" prefWidth="120.0" />
                 <Text layoutX="252.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
                 <Line endX="285.0" layoutX="115.0" layoutY="73.0" startX="-115.0" />
             <Text fill="RED" layoutX="36.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="İşlem Tipi-1 " />
             <Text fill="RED" layoutX="263.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="İşlem Tipi-2" />
-            <CheckBox layoutX="95.0" layoutY="108.0" mnemonicParsing="false" text="Peşin" />
-            <CheckBox layoutX="14.0" layoutY="108.0" mnemonicParsing="false" text="Çek" />
-            <CheckBox layoutX="14.0" layoutY="132.0" mnemonicParsing="false" text="Senet" />
-            <CheckBox layoutX="213.0" layoutY="108.0" mnemonicParsing="false" text="Satış" />
-            <CheckBox layoutX="213.0" layoutY="132.0" mnemonicParsing="false" text="Satış İade" />
-            <CheckBox layoutX="310.0" layoutY="108.0" mnemonicParsing="false" text="Alış" />
-            <CheckBox layoutX="310.0" layoutY="132.0" mnemonicParsing="false" text="Alış İade" />
+            <CheckBox fx:id="checkPesin" layoutX="95.0" layoutY="108.0" mnemonicParsing="false" selected="true" text="Peşin" />
+            <CheckBox fx:id="checkCek" layoutX="14.0" layoutY="108.0" mnemonicParsing="false" selected="true" text="Çek" />
+            <CheckBox fx:id="checkSenet" layoutX="14.0" layoutY="132.0" mnemonicParsing="false" selected="true" text="Senet" />
+            <CheckBox fx:id="checkSatis" layoutX="213.0" layoutY="108.0" mnemonicParsing="false" selected="true" text="Satış" />
+            <CheckBox fx:id="checkSatisIade" layoutX="213.0" layoutY="132.0" mnemonicParsing="false" selected="true" text="Satış İade" />
+            <CheckBox fx:id="checkAlis" layoutX="310.0" layoutY="108.0" mnemonicParsing="false" selected="true" text="Alış" />
+            <CheckBox fx:id="checkAlisIade" layoutX="310.0" layoutY="132.0" mnemonicParsing="false" selected="true" text="Alış İade" />
             <Line endX="285.0" layoutX="115.0" layoutY="158.0" startX="-115.0" />
-            <RadioButton layoutX="14.0" layoutY="170.0" mnemonicParsing="false" text="Tüm Cariler" />
-            <RadioButton layoutX="14.0" layoutY="200.0" mnemonicParsing="false" text="Cari Grubu" />
-            <RadioButton layoutX="14.0" layoutY="230.0" mnemonicParsing="false" text="Cari Adı" />
-            <ComboBox layoutX="125.0" layoutY="196.0" prefHeight="26.0" prefWidth="260.0" />
-            <ComboBox layoutX="125.0" layoutY="226.0" prefHeight="26.0" prefWidth="260.0" />
-            <RadioButton layoutX="123.0" layoutY="263.0" mnemonicParsing="false" text="Artan Sıralama" />
-            <RadioButton layoutX="254.0" layoutY="263.0" mnemonicParsing="false" text="Azalan Sıralama" />
+            <RadioButton fx:id="rbTumCariler" layoutX="14.0" layoutY="170.0" mnemonicParsing="false" selected="true" text="Tüm Cariler" />
+            <RadioButton fx:id="rbCariGrubu" layoutX="14.0" layoutY="200.0" mnemonicParsing="false" text="Cari Grubu" />
+            <RadioButton fx:id="rbCariAdi" layoutX="14.0" layoutY="230.0" mnemonicParsing="false" text="Cari Adı" />
+            <ComboBox fx:id="cbCariGrubu" editable="true" layoutX="125.0" layoutY="196.0" prefHeight="26.0" prefWidth="260.0" />
+            <ComboBox fx:id="cbCariAdi" editable="true" layoutX="125.0" layoutY="226.0" prefHeight="26.0" prefWidth="260.0" />
+            <RadioButton fx:id="rbArtanSiralama" layoutX="123.0" layoutY="263.0" mnemonicParsing="false" text="Artan Sıralama" />
+            <RadioButton fx:id="rbAzalanSiralama" layoutX="254.0" layoutY="263.0" mnemonicParsing="false" selected="true" text="Azalan Sıralama" />
             <Line endX="285.0" layoutX="115.0" layoutY="292.0" startX="-115.0" />
-            <Button layoutX="138.0" layoutY="305.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: lightblue;" text="Raporu Görüntüle" />
+            <Button fx:id="btnRaporGoruntule" layoutX="138.0" layoutY="305.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnRaporGoruntule" onMouseExited="#onMouseExitedbtnRaporGoruntule" onMousePressed="#onMousePressedbtnRaporGoruntule" onMouseReleased="#onMouseReleasedbtnRaporGoruntule" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Raporu Görüntüle" />
             </children>
         </AnchorPane>
     </content>

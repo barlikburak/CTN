@@ -11,6 +11,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Effect;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
@@ -261,15 +263,338 @@ public class FXMLCariIslemlerController implements Initializable {
     private DatePicker dpBasIslemTarihiEOTIslemler;
     @FXML
     private DatePicker dpSonIslemTarihiEOTIslemler;
-    
+
+    private Effect efekt;
+
     /**
      * Initializes the controller class.
+     *
      * @param url
      * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+        efekt = new DropShadow();
+    }
+
+    @FXML
+    private void onMousePressedbtnCariSecimi() {
+        btnCariSecimi.setLayoutY(btnCariSecimi.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnCariSecimi() {
+        btnCariSecimi.setLayoutY(btnCariSecimi.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnCariSecimi() {
+        btnCariSecimi.setEffect(efekt);
+    }
+
+    @FXML
+    private void onMouseExitedbtnCariSecimi() {
+        btnCariSecimi.setEffect(null);
+    }
+
+    @FXML
+    private void onMousePressedbtnEPostaGonder() {
+        btnEPostaGonder.setLayoutY(btnEPostaGonder.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnEPostaGonder() {
+        btnEPostaGonder.setLayoutY(btnEPostaGonder.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnEPostaGonder() {
+        btnEPostaGonder.setEffect(efekt);
+    }
+
+    @FXML
+    private void onMouseExitedbtnEPostaGonder() {
+        btnEPostaGonder.setEffect(null);
+    }
+
+    @FXML
+    private void onMousePressedbtnGrubaEPostaGonder() {
+        btnGrubaEPostaGonder.setLayoutY(btnGrubaEPostaGonder.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnGrubaEPostaGonder() {
+        btnGrubaEPostaGonder.setLayoutY(btnGrubaEPostaGonder.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnGrubaEPostaGonder() {
+        btnGrubaEPostaGonder.setEffect(efekt);
+    }
+
+    @FXML
+    private void onMouseExitedbtnGrubaEPostaGonder() {
+        btnGrubaEPostaGonder.setEffect(null);
+    }
+
+    @FXML
+    private void onMousePressedivPlus() {
+        ivPlus.setLayoutY(ivPlus.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedivPlus() {
+        ivPlus.setLayoutY(ivPlus.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredivPlus() {
+        ivPlus.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedivPlus() {
+        ivPlus.setEffect(null);
+    }
     
+    @FXML
+    private void onMousePressedbtnPesinOdemeEOTIslemler() {
+        btnPesinOdemeEOTIslemler.setLayoutY(btnPesinOdemeEOTIslemler.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnPesinOdemeEOTIslemler() {
+        btnPesinOdemeEOTIslemler.setLayoutY(btnPesinOdemeEOTIslemler.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnPesinOdemeEOTIslemler() {
+        btnPesinOdemeEOTIslemler.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnPesinOdemeEOTIslemler() {
+        btnPesinOdemeEOTIslemler.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnCekTanimlaEOTIslemler() {
+        btnCekTanimlaEOTIslemler.setLayoutY(btnCekTanimlaEOTIslemler.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnCekTanimlaEOTIslemler() {
+        btnCekTanimlaEOTIslemler.setLayoutY(btnCekTanimlaEOTIslemler.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnCekTanimlaEOTIslemler() {
+        btnCekTanimlaEOTIslemler.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnCekTanimlaEOTIslemler() {
+        btnCekTanimlaEOTIslemler.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnSenetTanimlaEOTIslemler() {
+        btnSenetTanimlaEOTIslemler.setLayoutY(btnSenetTanimlaEOTIslemler.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnSenetTanimlaEOTIslemler() {
+        btnSenetTanimlaEOTIslemler.setLayoutY(btnSenetTanimlaEOTIslemler.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnSenetTanimlaEOTIslemler() {
+        btnSenetTanimlaEOTIslemler.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnSenetTanimlaEOTIslemler() {
+        btnSenetTanimlaEOTIslemler.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnSorgulaEOTIslemler() {
+        btnSorgulaEOTIslemler.setLayoutY(btnSorgulaEOTIslemler.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnSorgulaEOTIslemler() {
+        btnSorgulaEOTIslemler.setLayoutY(btnSorgulaEOTIslemler.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnSorgulaEOTIslemler() {
+        btnSorgulaEOTIslemler.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnSorgulaEOTIslemler() {
+        btnSorgulaEOTIslemler.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnExcelEOTIslemler() {
+        btnExcelEOTIslemler.setLayoutY(btnExcelEOTIslemler.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnExcelEOTIslemler() {
+        btnExcelEOTIslemler.setLayoutY(btnExcelEOTIslemler.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnExcelEOTIslemler() {
+        btnExcelEOTIslemler.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnExcelEOTIslemler() {
+        btnExcelEOTIslemler.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnPDFEOTIslemler() {
+        btnPDFEOTIslemler.setLayoutY(btnPDFEOTIslemler.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnPDFEOTIslemler() {
+        btnPDFEOTIslemler.setLayoutY(btnPDFEOTIslemler.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnPDFEOTIslemler() {
+        btnPDFEOTIslemler.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnPDFEOTIslemler() {
+        btnPDFEOTIslemler.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnSorgulaUrunler() {
+        btnSorgulaUrunler.setLayoutY(btnSorgulaUrunler.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnSorgulaUrunler() {
+        btnSorgulaUrunler.setLayoutY(btnSorgulaUrunler.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnSorgulaUrunler() {
+        btnSorgulaUrunler.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnSorgulaUrunler() {
+        btnSorgulaUrunler.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnExcelUrunler() {
+        btnExcelUrunler.setLayoutY(btnExcelUrunler.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnExcelUrunler() {
+        btnExcelUrunler.setLayoutY(btnExcelUrunler.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnExcelUrunler() {
+        btnExcelUrunler.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnExcelUrunler() {
+        btnExcelUrunler.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnPDFUrunler() {
+        btnPDFUrunler.setLayoutY(btnPDFUrunler.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnPDFUrunler() {
+        btnPDFUrunler.setLayoutY(btnPDFUrunler.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnPDFUrunler() {
+        btnPDFUrunler.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnPDFUrunler() {
+        btnPDFUrunler.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnSorgulaFASIST() {
+        btnSorgulaFASIST.setLayoutY(btnSorgulaFASIST.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnSorgulaFASIST() {
+        btnSorgulaFASIST.setLayoutY(btnSorgulaFASIST.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnSorgulaFASIST() {
+        btnSorgulaFASIST.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnSorgulaFASIST() {
+        btnSorgulaFASIST.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnExcelFASIST() {
+        btnExcelFASIST.setLayoutY(btnExcelFASIST.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnExcelFASIST() {
+        btnExcelFASIST.setLayoutY(btnExcelFASIST.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnExcelFASIST() {
+        btnExcelFASIST.setEffect(efekt);;
+    }
+
+    @FXML
+    private void onMouseExitedbtnExcelFASIST() {
+        btnExcelFASIST.setEffect(null);
+    }
+    
+    @FXML
+    private void onMousePressedbtnPDFFASIST() {
+        btnPDFFASIST.setLayoutY(btnPDFFASIST.getLayoutY() + 4);
+    }
+
+    @FXML
+    private void onMouseReleasedbtnPDFFASIST() {
+        btnPDFFASIST.setLayoutY(btnPDFFASIST.getLayoutY() - 4);
+    }
+
+    @FXML
+    private void onMouseEnteredbtnPDFFASIST() {
+        btnPDFFASIST.setEffect(efekt);
+    }
+
+    @FXML
+    private void onMouseExitedbtnPDFFASIST() {
+        btnPDFFASIST.setEffect(null);
+    }
+
 }

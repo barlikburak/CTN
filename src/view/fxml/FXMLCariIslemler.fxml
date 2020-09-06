@@ -24,14 +24,14 @@
             <children>
                 <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Seçimi" />
                 <ComboBox fx:id="cbCariSecimi" editable="true" layoutX="113.0" layoutY="10.0" prefHeight="26.0" prefWidth="451.0" />
-                <Button fx:id="btnCariSecimi" layoutX="570.0" layoutY="10.0" mnemonicParsing="false" text="..." />
-                <ImageView fx:id="ivPlus" fitHeight="26.0" fitWidth="26.0" layoutX="610.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                <Button fx:id="btnCariSecimi" layoutX="570.0" layoutY="10.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnCariSecimi" onMouseExited="#onMouseExitedbtnCariSecimi" onMousePressed="#onMousePressedbtnCariSecimi" onMouseReleased="#onMouseReleasedbtnCariSecimi" text="..." />
+                <ImageView fx:id="ivPlus" fitHeight="26.0" fitWidth="26.0" layoutX="610.0" layoutY="10.0" onMouseEntered="#onMouseEnteredivPlus" onMouseExited="#onMouseExitedivPlus" onMousePressed="#onMousePressedivPlus" onMouseReleased="#onMouseReleasedivPlus" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../resources/drawable/plus.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="btnEPostaGonder" layoutX="650.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="E-Posta Gönder" />
-                <Button fx:id="btnGrubaEPostaGonder" layoutX="780.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Cari Grubuna E-Posta Gönder" />
+                <Button fx:id="btnEPostaGonder" layoutX="650.0" layoutY="10.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnEPostaGonder" onMouseExited="#onMouseExitedbtnEPostaGonder" onMousePressed="#onMousePressedbtnEPostaGonder" onMouseReleased="#onMouseReleasedbtnEPostaGonder" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="E-Posta Gönder" />
+                <Button fx:id="btnGrubaEPostaGonder" layoutX="780.0" layoutY="10.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnGrubaEPostaGonder" onMouseExited="#onMouseExitedbtnGrubaEPostaGonder" onMousePressed="#onMousePressedbtnGrubaEPostaGonder" onMouseReleased="#onMouseReleasedbtnGrubaEPostaGonder" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Cari Grubuna E-Posta Gönder" />
                 <TabPane layoutY="40.0" prefHeight="510.0" prefWidth="1020.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
                         <Tab text="Genel Bilgiler">
@@ -98,9 +98,9 @@
                                                 </TableView>
                                             </content>
                                         </ScrollPane>
-                                        <Button fx:id="btnSorgulaEOTIslemler" layoutX="826.0" layoutY="370.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Sorgula" />
-                                        <Button fx:id="btnExcelEOTIslemler" layoutX="826.0" layoutY="405.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="Excel'e Aktar" />
-                                        <Button fx:id="btnPDFEOTIslemler" layoutX="825.0" layoutY="440.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="PDF'e Aktar" />
+                                        <Button fx:id="btnSorgulaEOTIslemler" layoutX="826.0" layoutY="370.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnSorgulaEOTIslemler" onMouseExited="#onMouseExitedbtnSorgulaEOTIslemler" onMousePressed="#onMousePressedbtnSorgulaEOTIslemler" onMouseReleased="#onMouseReleasedbtnSorgulaEOTIslemler" prefWidth="180.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Sorgula" />
+                                        <Button fx:id="btnExcelEOTIslemler" layoutX="826.0" layoutY="405.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnExcelEOTIslemler" onMouseExited="#onMouseExitedbtnExcelEOTIslemler" onMousePressed="#onMousePressedbtnExcelEOTIslemler" onMouseReleased="#onMouseReleasedbtnExcelEOTIslemler" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="Excel'e Aktar" />
+                                        <Button fx:id="btnPDFEOTIslemler" layoutX="825.0" layoutY="440.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnPDFEOTIslemler" onMouseExited="#onMouseExitedbtnPDFEOTIslemler" onMousePressed="#onMousePressedbtnPDFEOTIslemler" onMouseReleased="#onMouseReleasedbtnPDFEOTIslemler" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="PDF'e Aktar" />
                                         <Text layoutX="881.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raporlama" underline="true" />
                                         <Line endX="100.0" layoutX="707.0" layoutY="332.0" startX="100.0" startY="145.0" />
                                         <CheckBox fx:id="checkTahsilatEOTIslemler" layoutX="235.0" layoutY="444.0" mnemonicParsing="false" selected="true" text="Tahsilat" />
@@ -130,9 +130,9 @@
                                         <CheckBox fx:id="checkPesinEOTIslemler" layoutX="121.0" layoutY="392.0" mnemonicParsing="false" selected="true" text="Peşin" />
                                         <CheckBox fx:id="checkCekSenetEOTIslemler" layoutX="121.0" layoutY="418.0" mnemonicParsing="false" selected="true" text="Çek-Senet" />
                                         <Line endX="-10.0" endY="89.0" layoutX="127.0" layoutY="388.0" startX="-10.0" startY="-24.5" />
-                                        <Button fx:id="btnPesinOdemeEOTIslemler" layoutX="2.0" layoutY="375.0" mnemonicParsing="false" prefWidth="112.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Peşin Ödeme" />
-                                        <Button fx:id="btnCekTanimlaEOTIslemler" layoutX="2.0" layoutY="410.0" mnemonicParsing="false" prefWidth="112.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Çek Tanımla" />
-                                        <Button fx:id="btnSenetTanimlaEOTIslemler" layoutX="2.0" layoutY="445.0" mnemonicParsing="false" prefWidth="112.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Senet Tanımla" />
+                                        <Button fx:id="btnPesinOdemeEOTIslemler" layoutX="2.0" layoutY="375.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnPesinOdemeEOTIslemler" onMouseExited="#onMouseExitedbtnPesinOdemeEOTIslemler" onMousePressed="#onMousePressedbtnPesinOdemeEOTIslemler" onMouseReleased="#onMouseReleasedbtnPesinOdemeEOTIslemler" prefWidth="112.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Peşin Ödeme" />
+                                        <Button fx:id="btnCekTanimlaEOTIslemler" layoutX="2.0" layoutY="410.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnCekTanimlaEOTIslemler" onMouseExited="#onMouseExitedbtnCekTanimlaEOTIslemler" onMousePressed="#onMousePressedbtnCekTanimlaEOTIslemler" onMouseReleased="#onMouseReleasedbtnCekTanimlaEOTIslemler" prefWidth="112.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Çek Tanımla" />
+                                        <Button fx:id="btnSenetTanimlaEOTIslemler" layoutX="2.0" layoutY="445.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnSenetTanimlaEOTIslemler" onMouseExited="#onMouseExitedbtnSenetTanimlaEOTIslemler" onMousePressed="#onMousePressedbtnSenetTanimlaEOTIslemler" onMouseReleased="#onMouseReleasedbtnSenetTanimlaEOTIslemler" prefWidth="112.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Senet Tanımla" />
                                     </children>
                                 </AnchorPane>
                             </content>
@@ -171,9 +171,9 @@
                                                 </TableView>
                                             </content>
                                         </ScrollPane>
-                                        <Button fx:id="btnSorgulaUrunler" layoutX="826.0" layoutY="370.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Sorgula" />
-                                        <Button fx:id="btnExcelUrunler" layoutX="826.0" layoutY="405.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="Excel'e Aktar" />
-                                        <Button fx:id="btnPDFUrunler" layoutX="825.0" layoutY="440.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="PDF'e Aktar" />
+                                        <Button fx:id="btnSorgulaUrunler" layoutX="826.0" layoutY="370.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnSorgulaUrunler" onMouseExited="#onMouseExitedbtnSorgulaUrunler" onMousePressed="#onMousePressedbtnSorgulaUrunler" onMouseReleased="#onMouseReleasedbtnSorgulaUrunler" prefWidth="180.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Sorgula" />
+                                        <Button fx:id="btnExcelUrunler" layoutX="826.0" layoutY="405.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnExcelUrunler" onMouseExited="#onMouseExitedbtnExcelUrunler" onMousePressed="#onMousePressedbtnExcelUrunler" onMouseReleased="#onMouseReleasedbtnExcelUrunler" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="Excel'e Aktar" />
+                                        <Button fx:id="btnPDFUrunler" layoutX="825.0" layoutY="440.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnPDFUrunler" onMouseExited="#onMouseExitedbtnPDFUrunler" onMousePressed="#onMousePressedbtnPDFUrunler" onMouseReleased="#onMouseReleasedbtnPDFUrunler" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="PDF'e Aktar" />
                                         <Text layoutX="881.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raporlama" underline="true" />
                                         <Line endX="100.0" layoutX="707.0" layoutY="332.0" startX="100.0" startY="145.0" />
                                         <CheckBox fx:id="checkSiparisUrunler" layoutX="25.0" layoutY="455.0" mnemonicParsing="false" selected="true" text="Sipariş" />
@@ -235,9 +235,9 @@
                                                 </TableView>
                                             </content>
                                         </ScrollPane>
-                                        <Button fx:id="btnSorgulaFASIST" layoutX="826.0" layoutY="370.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Sorgula" />
-                                        <Button fx:id="btnExcelFASIST" layoutX="826.0" layoutY="405.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="Excel'e Aktar" />
-                                        <Button fx:id="btnPDFFASIST" layoutX="825.0" layoutY="440.0" mnemonicParsing="false" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="PDF'e Aktar" />
+                                        <Button fx:id="btnSorgulaFASIST" layoutX="826.0" layoutY="370.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnSorgulaFASIST" onMouseExited="#onMouseExitedbtnSorgulaFASIST" onMousePressed="#onMousePressedbtnSorgulaFASIST" onMouseReleased="#onMouseReleasedbtnSorgulaFASIST" prefWidth="180.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Sorgula" />
+                                        <Button fx:id="btnExcelFASIST" layoutX="826.0" layoutY="405.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnExcelFASIST" onMouseExited="#onMouseExitedbtnExcelFASIST" onMousePressed="#onMousePressedbtnExcelFASIST" onMouseReleased="#onMouseReleasedbtnExcelFASIST" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="Excel'e Aktar" />
+                                        <Button fx:id="btnPDFFASIST" layoutX="825.0" layoutY="440.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnPDFFASIST" onMouseExited="#onMouseExitedbtnPDFFASIST" onMousePressed="#onMousePressedbtnPDFFASIST" onMouseReleased="#onMouseReleasedbtnPDFFASIST" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="PDF'e Aktar" />
                                         <Text layoutX="881.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raporlama" underline="true" />
                                         <Line endX="100.0" layoutX="707.0" layoutY="332.0" startX="100.0" startY="145.0" />
                                         <CheckBox fx:id="checkSiparisFASIST" layoutX="25.0" layoutY="455.0" mnemonicParsing="false" selected="true" text="Sipariş" />

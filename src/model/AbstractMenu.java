@@ -53,24 +53,6 @@ public abstract class AbstractMenu extends ImageView {
         altKategoriEventHandler();
     }
 
-    public void start(Stage primaryStage, String fxmlName) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/" + fxmlName + ".fxml"));
-
-            Parent root = loader.load();
-
-            Scene scene = new Scene(root);
-
-            primaryStage.setScene(scene);
-            primaryStage.setX(175);
-            primaryStage.setY(129);
-
-            primaryStage.show();
-        } catch (IOException ex) {
-            System.out.println("ERROR: " + ex.getMessage());
-        }
-    }
-
     public void start(Stage primaryStage, String fxmlName, String title) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/fxml/" + fxmlName + ".fxml"));

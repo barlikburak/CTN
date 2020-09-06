@@ -4,17 +4,17 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FXMLCekSenetCirolaController">
     <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="1020.0">
             <children>
@@ -24,70 +24,86 @@
                         <Line endX="102.0" layoutX="212.0" layoutY="227.0" startX="-205.0" />
                         <Line endX="102.0" layoutX="212.0" layoutY="491.0" startX="-205.0" />
                         <Text layoutX="10.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Seçimi" />
-                        <ComboBox editable="true" layoutX="100.0" layoutY="10.0" prefWidth="200.0" />
+                        <ComboBox fx:id="cbCariSecimi" editable="true" layoutX="100.0" layoutY="10.0" prefWidth="200.0" />
                         <Text layoutX="10.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="İşlem Tipi" />
                         <Text layoutX="10.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="İşlem Tarihi" />
                         <Text layoutX="10.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Açıklama" />
-                        <TextArea layoutX="100.0" layoutY="123.0" prefHeight="80.0" prefWidth="200.0" />
-                        <ComboBox disable="true" editable="true" layoutX="100.0" layoutY="57.0" prefWidth="200.0" promptText="Ciro" />
-                        <DatePicker layoutX="100.0" layoutY="89.0" prefWidth="200.0" />
-                        <Button layoutX="175.0" layoutY="505.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: darkblue; -fx-text-fill: white;" text="Kaydet" />
-                        <Button layoutX="50.0" layoutY="505.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: darkblue; -fx-text-fill: white;" text="Temizle" />
+                        <TextArea fx:id="taAciklama" layoutX="100.0" layoutY="123.0" prefHeight="80.0" prefWidth="200.0" />
+                        <ComboBox fx:id="cbIslemTipi" disable="true" editable="true" layoutX="100.0" layoutY="57.0" prefWidth="200.0" />
+                        <DatePicker fx:id="dpIslemTarihi" layoutX="100.0" layoutY="89.0" prefWidth="200.0" />
+                        <Button fx:id="btnKaydet" layoutX="175.0" layoutY="505.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnKaydet" onMouseExited="#onMouseExitedbtnKaydet" onMousePressed="#onMousePressedbtnKaydet" onMouseReleased="#onMouseReleasedbtnKaydet" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: darkblue; -fx-text-fill: white;" text="Kaydet" />
+                        <Button fx:id="btnTemizle" layoutX="50.0" layoutY="505.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnTemizle" onMouseExited="#onMouseExitedbtnTemizle" onMousePressed="#onMousePressedbtnTemizle" onMouseReleased="#onMouseReleasedbtnTemizle" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: darkblue; -fx-text-fill: white;" text="Temizle" />
                         <Text layoutX="20.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Müşteri Çeki" />
                         <Text layoutX="20.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Müşteri Senedi" />
-                        <TextField alignment="CENTER_RIGHT" layoutX="129.0" layoutY="433.0" prefWidth="100.0" text="0.00" />
-                        <TextField alignment="CENTER_RIGHT" layoutX="129.0" layoutY="406.0" prefWidth="100.0" text="0.00" />
+                        <TextField fx:id="tfMusteriSenedi" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="432.0" minHeight="24.0" prefHeight="24.0" prefWidth="100.0" text="0.00" />
+                        <TextField fx:id="tfMusteriCeki" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="407.0" minHeight="24.0" prefHeight="24.0" prefWidth="100.0" text="0.00" />
+                  <Text layoutX="20.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutar" visible="false" />
+                  <Text layoutX="20.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Döviz" visible="false" />
+                  <Text layoutX="20.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Döviz Kuru" visible="false" />
+                  <Text layoutX="20.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dövizli Tutar" visible="false" />
+                  <Text layoutX="20.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peşinat" visible="false" />
+                  <Text layoutX="20.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kendi Çekim" visible="false" />
+                  <Text layoutX="20.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kendi Senedim" visible="false" />
+                  <Text layoutX="20.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Açık Hesap" visible="false" />
+                  <TextField fx:id="tfAcikHesap" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="457.0" minHeight="24.0" prefHeight="24.0" prefWidth="100.0" text="0.00" visible="false" />
+                  <TextField fx:id="tfKendiSenedim" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="382.0" minHeight="24.0" prefHeight="24.0" prefWidth="100.0" text="0.00" visible="false" />
+                  <TextField fx:id="tfKendiCekim" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="357.0" minHeight="24.0" prefHeight="24.0" prefWidth="100.0" text="0.00" visible="false" />
+                  <TextField fx:id="tfPesinat" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="332.0" minHeight="24.0" prefHeight="24.0" prefWidth="100.0" text="0.00" visible="false" />
+                  <TextField fx:id="tfDovizliTutar" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="307.0" minHeight="24.0" prefHeight="24.0" prefWidth="100.0" text="0.00" visible="false" />
+                  <TextField fx:id="tfDovizKuru" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="282.0" minHeight="24.0" prefHeight="24.0" prefWidth="100.0" text="0.00" visible="false" />
+                  <TextField fx:id="tfTutar" alignment="CENTER_RIGHT" layoutX="129.0" layoutY="232.0" minHeight="24.0" prefHeight="24.0" prefWidth="100.0" text="0.00" visible="false" />
+                  <ComboBox fx:id="cbDoviz" editable="true" layoutX="129.0" layoutY="257.0" minHeight="24.0" prefHeight="24.0" prefWidth="100.0" visible="false" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="320.0" prefHeight="550.0" prefWidth="700.0">
                     <children>
-                        <TableView layoutY="50.0" prefHeight="200.0" prefWidth="700.0" tableMenuButtonVisible="true">
+                        <TableView fx:id="tvKasadaki" layoutY="50.0" prefHeight="200.0" prefWidth="700.0" tableMenuButtonVisible="true">
                             <placeholder>
                                 <Label text="Veri Yok" />
                             </placeholder>
                             <columns>
-                                <TableColumn prefWidth="75.0" text="No" />
-                                <TableColumn prefWidth="75.0" text="Kayıt T." />
-                                <TableColumn prefWidth="75.0" text="Vâde T." />
-                                <TableColumn prefWidth="75.0" text="Tutar" />
-                                <TableColumn prefWidth="75.0" text="Döviz" />
-                                <TableColumn prefWidth="75.0" text="Belge Turu" />
-                                <TableColumn prefWidth="75.0" text="Cari Adı" />
+                                <TableColumn fx:id="tcNoKasa" prefWidth="75.0" text="No" />
+                                <TableColumn fx:id="tcKayitTKasa" prefWidth="75.0" text="Kayıt T." />
+                                <TableColumn fx:id="tcVadeTKasa" prefWidth="75.0" text="Vâde T." />
+                                <TableColumn fx:id="tcTutarKasa" prefWidth="75.0" text="Tutar" />
+                                <TableColumn fx:id="tcDovizKasa" prefWidth="75.0" text="Döviz" />
+                                <TableColumn fx:id="tcBelgeTuruKasa" prefWidth="75.0" text="Belge Turu" />
+                                <TableColumn fx:id="tcCariAdiKasa" prefWidth="75.0" text="Cari Adı" />
                             </columns>
                             <columnResizePolicy>
                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                             </columnResizePolicy>
                         </TableView>
-                        <TableView layoutY="305.0" prefHeight="200.0" prefWidth="700.0" tableMenuButtonVisible="true">
+                        <TableView fx:id="tvSecilen" layoutY="305.0" prefHeight="200.0" prefWidth="700.0" tableMenuButtonVisible="true">
                             <placeholder>
                                 <Label text="Veri Yok" />
                             </placeholder>
                             <columns>
-                                <TableColumn prefWidth="75.0" text="No" />
-                                <TableColumn prefWidth="75.0" text="Kayıt T." />
-                                <TableColumn prefWidth="75.0" text="Vâde T." />
-                                <TableColumn prefWidth="75.0" text="Tutar" />
-                                <TableColumn prefWidth="75.0" text="Döviz" />
-                                <TableColumn prefWidth="75.0" text="Belge Turu" />
-                                <TableColumn prefWidth="75.0" text="Cari Adı" />
+                                <TableColumn fx:id="tcNoSecilen" prefWidth="75.0" text="No" />
+                                <TableColumn fx:id="tcKayitTSecilen" prefWidth="75.0" text="Kayıt T." />
+                                <TableColumn fx:id="tcVadeTSecilen" prefWidth="75.0" text="Vâde T." />
+                                <TableColumn fx:id="tcTutarSecilen" prefWidth="75.0" text="Tutar" />
+                                <TableColumn fx:id="tcDovizSecilen" prefWidth="75.0" text="Döviz" />
+                                <TableColumn fx:id="tcBelgeTuruSecilen" prefWidth="75.0" text="Belge Turu" />
+                                <TableColumn fx:id="tcCariAdiSecilen" prefWidth="75.0" text="Cari Adı" />
                             </columns>
                             <columnResizePolicy>
                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                             </columnResizePolicy>
                         </TableView>
                         <Text fill="RED" layoutX="14.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toplam" />
-                        <TextField alignment="CENTER_RIGHT" editable="false" layoutX="561.0" layoutY="513.0" prefWidth="125.0" style="-fx-background-color: red; -fx-text-fill: white;" text="NaN" />
-                        <TextField alignment="CENTER_RIGHT" editable="false" layoutX="70.0" layoutY="515.0" prefWidth="125.0" style="-fx-background-color: red; -fx-text-fill: white;" text="0.00" />
+                        <TextField fx:id="tfOrtVade" alignment="CENTER_RIGHT" editable="false" layoutX="561.0" layoutY="513.0" prefWidth="125.0" style="-fx-background-color: red; -fx-text-fill: white;" text="NaN" />
+                        <TextField fx:id="tfToplam" alignment="CENTER_RIGHT" editable="false" layoutX="70.0" layoutY="515.0" prefWidth="125.0" style="-fx-background-color: red; -fx-text-fill: white;" text="0.00" />
                         <Text fill="RED" layoutX="487.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ort. Vâde" />
                         <Text layoutX="5.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kasadaki Çek-Senet Listesi" />
-                        <CheckBox disable="true" layoutX="20.0" layoutY="25.0" mnemonicParsing="false" text="Kendi Çekim" />
-                        <CheckBox disable="true" layoutX="150.0" layoutY="25.0" mnemonicParsing="false" text="Kendi Senedim" />
-                        <CheckBox layoutX="290.0" layoutY="25.0" mnemonicParsing="false" selected="true" text="Müşteri Çeki" />
-                        <CheckBox layoutX="420.0" layoutY="25.0" mnemonicParsing="false" text="Müşteri Senedi" />
-                        <Button disable="true" layoutX="10.0" layoutY="256.0" mnemonicParsing="false" prefWidth="163.0" style="-fx-background-color: lightblue;" text="+ Kendi Çekim Ekle" />
-                        <Button disable="true" layoutX="180.0" layoutY="256.0" mnemonicParsing="false" prefWidth="163.0" style="-fx-background-color: lightblue;" text="+ Kendi Senedim Ekle" />
-                        <Button layoutX="350.0" layoutY="256.0" mnemonicParsing="false" prefWidth="163.0" style="-fx-background-color: lightblue;" text="+ Müşteri Çeki Ekle" />
-                        <Button layoutX="520.0" layoutY="256.0" mnemonicParsing="false" prefWidth="163.0" style="-fx-background-color: lightblue;" text="+ Müşteri Senedi Ekle" />
+                        <CheckBox fx:id="checkKendiCekim" disable="true" layoutX="20.0" layoutY="25.0" mnemonicParsing="false" text="Kendi Çekim" />
+                        <CheckBox fx:id="checkKendiSenedim" disable="true" layoutX="150.0" layoutY="25.0" mnemonicParsing="false" text="Kendi Senedim" />
+                        <CheckBox fx:id="checkMusteriCeki" layoutX="290.0" layoutY="25.0" mnemonicParsing="false" selected="true" text="Müşteri Çeki" />
+                        <CheckBox fx:id="checkMusteriSenedi" layoutX="420.0" layoutY="25.0" mnemonicParsing="false" text="Müşteri Senedi" />
+                        <Button fx:id="btnKendiCekimEkle" disable="true" layoutX="10.0" layoutY="256.0" mnemonicParsing="false" prefWidth="163.0" style="-fx-background-color: lightblue;" text="+ Kendi Çekim Ekle" />
+                        <Button fx:id="btnKendiSenedimEkle" disable="true" layoutX="180.0" layoutY="256.0" mnemonicParsing="false" prefWidth="163.0" style="-fx-background-color: lightblue;" text="+ Kendi Senedim Ekle" />
+                        <Button fx:id="btnMusteriCekiEkle" layoutX="350.0" layoutY="256.0" mnemonicParsing="false" prefWidth="163.0" style="-fx-background-color: lightblue;" text="+ Müşteri Çeki Ekle" />
+                        <Button fx:id="btnMusteriSenediEkle" layoutX="520.0" layoutY="256.0" mnemonicParsing="false" prefWidth="163.0" style="-fx-background-color: lightblue;" text="+ Müşteri Senedi Ekle" />
                         <Text layoutX="5.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seçilen Çek-Senetler" />
                     </children>
                 </AnchorPane>

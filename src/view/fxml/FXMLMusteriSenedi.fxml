@@ -13,68 +13,70 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="1002.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-  <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="1000.0">
-         <children>
-            <ScrollPane prefHeight="390.0" prefWidth="1002.0">
-               <content>
-                  <TableView prefHeight="390.0" prefWidth="2048.0" tableMenuButtonVisible="true">
-                  <placeholder>
-                        <Label text="Veri Yok" />
-                    </placeholder>
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="Cari Adı" />
-                      <TableColumn prefWidth="75.0" text="Seri No" />
-                        <TableColumn prefWidth="75.0" text="Çek No" />
-                        <TableColumn prefWidth="75.0" text="Kayıt T." />
-                        <TableColumn prefWidth="75.0" text="Ödeme T." />
-                        <TableColumn prefWidth="75.0" text="Vâde T." />
-                        <TableColumn prefWidth="75.0" text="Tutarı" />
-                        <TableColumn prefWidth="75.0" text="Ödeme" />
-                        <TableColumn prefWidth="75.0" text="Döviz" />
-                        <TableColumn prefWidth="75.0" text="Döviz Değeri" />
-                        <TableColumn prefWidth="75.0" text="Genel Tutar" />
-                        <TableColumn prefWidth="75.0" text="Açıklama" />
-                        <TableColumn prefWidth="75.0" text="Ciro Eden" />
-                        <TableColumn prefWidth="75.0" text="Durumu" />
-                        <TableColumn prefWidth="75.0" text="Yeri" />
-                    </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
-                  </TableView>
-               </content></ScrollPane>
-            <Text layoutX="20.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Seçimi" />
-            <Text layoutX="20.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yeri" />
-            <CheckBox layoutX="20.0" layoutY="475.0" mnemonicParsing="false" text="Kayıt" />
-            <CheckBox layoutX="20.0" layoutY="500.0" mnemonicParsing="false" text="Ödeme" />
-            <CheckBox layoutX="20.0" layoutY="525.0" mnemonicParsing="false" text="Vâde" />
-            <Text layoutX="20.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarihler" />
-            <ComboBox layoutX="110.0" layoutY="396.0" prefHeight="26.0" prefWidth="530.0" />
-            <ComboBox layoutX="110.0" layoutY="430.0" prefWidth="200.0" />
-            <ComboBox layoutX="475.0" layoutY="429.0" prefWidth="200.0" />
-            <Text layoutX="400.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durumu" />
-            <Button layoutX="644.0" layoutY="396.0" mnemonicParsing="false" text="..." />
-            <DatePicker layoutX="100.0" layoutY="469.0" prefHeight="25.0" prefWidth="120.0" />
-            <DatePicker layoutX="100.0" layoutY="496.0" prefHeight="25.0" prefWidth="120.0" />
-            <DatePicker layoutX="100.0" layoutY="523.0" prefHeight="25.0" prefWidth="120.0" />
-            <Text layoutX="225.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
-            <Text layoutX="225.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
-            <Text layoutX="225.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
-            <DatePicker layoutX="235.0" layoutY="469.0" prefWidth="125.0" />
-            <DatePicker layoutX="235.0" layoutY="496.0" prefHeight="26.0" prefWidth="125.0" />
-            <DatePicker layoutX="235.0" layoutY="523.0" prefHeight="25.0" prefWidth="125.0" />
-            <Text layoutX="400.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seri No" />
-            <TextField layoutX="475.0" layoutY="469.0" prefHeight="26.0" prefWidth="200.0" />
-            <Line endX="-100.0" endY="141.0" layoutX="830.0" layoutY="409.0" startX="-100.0" startY="-19.0" />
-            <Line endX="50.0" endY="-43.0" layoutX="880.0" layoutY="433.0" startX="50.0" startY="118.0" />
-            <Label layoutX="750.0" layoutY="525.0" text="Kayıt Sayısı: 0" />
-            <Button layoutX="750.0" layoutY="425.0" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: lightblue;" text="Sorgula/Listele" />
-            <Button layoutX="750.0" layoutY="455.0" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: lightgreen;" text="Excel'e Aktar" />
-            <Button layoutX="750.0" layoutY="485.0" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: lightgreen;" text="PDF'e Aktar" />
-            <Text layoutX="795.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raporlama" />
-            <Line endX="44.0" layoutX="830.0" layoutY="413.0" startX="-45.0" />
-         </children></AnchorPane>
-  </content>
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="1002.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.FXMLMusteriSenediController">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="1000.0">
+            <children>
+                <ScrollPane prefHeight="352.0" prefWidth="1002.0">
+                    <content>
+                        <TableView fx:id="tableView" prefHeight="334.0" prefWidth="2048.0" tableMenuButtonVisible="true">
+                            <placeholder>
+                                <Label text="Veri Yok" />
+                            </placeholder>
+                            <columns>
+                                <TableColumn fx:id="tcCariAdi" prefWidth="75.0" text="Cari Adı" />
+                                <TableColumn fx:id="tcSeriNo" prefWidth="75.0" text="Seri No" />
+                                <TableColumn fx:id="tcCekNo" prefWidth="75.0" text="Çek No" />
+                                <TableColumn fx:id="tcKayitT" prefWidth="75.0" text="Kayıt T." />
+                                <TableColumn fx:id="tcOdemeT" prefWidth="75.0" text="Ödeme T." />
+                                <TableColumn fx:id="tcVadeT" prefWidth="75.0" text="Vâde T." />
+                                <TableColumn fx:id="tcTutari" prefWidth="75.0" text="Tutarı" />
+                                <TableColumn fx:id="tcOdeme" prefWidth="75.0" text="Ödeme" />
+                                <TableColumn fx:id="tcDoviz" prefWidth="75.0" text="Döviz" />
+                                <TableColumn fx:id="tcDovizDegeri" prefWidth="75.0" text="Döviz Değeri" />
+                                <TableColumn fx:id="tcGenelTutar" prefWidth="75.0" text="Genel Tutar" />
+                                <TableColumn fx:id="tcAciklama" maxWidth="6000.0" prefWidth="75.0" text="Açıklama" />
+                                <TableColumn fx:id="tcCiroEden" prefWidth="75.0" text="Ciro Eden" />
+                                <TableColumn fx:id="tcDurumu" prefWidth="75.0" text="Durumu" />
+                                <TableColumn fx:id="tcYeri" prefWidth="75.0" text="Yeri" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+                <Text layoutX="20.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cari Seçimi" />
+                <Text layoutX="20.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yeri" />
+                <CheckBox fx:id="checkKayit" layoutX="20.0" layoutY="475.0" mnemonicParsing="false" text="Kayıt" />
+                <CheckBox fx:id="checkOdeme" layoutX="20.0" layoutY="500.0" mnemonicParsing="false" text="Ödeme" />
+                <CheckBox fx:id="checkVade" layoutX="20.0" layoutY="525.0" mnemonicParsing="false" text="Vâde" />
+                <Text layoutX="20.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarihler" underline="true" />
+                <ComboBox fx:id="cbCariSecimi" editable="true" layoutX="110.0" layoutY="396.0" prefHeight="26.0" prefWidth="575.0" />
+                <ComboBox fx:id="cbYeri" editable="true" layoutX="110.0" layoutY="430.0" prefHeight="26.0" prefWidth="250.0" />
+                <ComboBox fx:id="cbDurumu" editable="true" layoutX="475.0" layoutY="429.0" prefWidth="250.0" />
+                <Text layoutX="400.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durumu" />
+                <Button fx:id="btnCariSecimi" layoutX="694.0" layoutY="396.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnCariSecimi" onMouseExited="#onMouseExitedbtnCariSecimi" onMousePressed="#onMousePressedbtnCariSecimi" onMouseReleased="#onMouseReleasedbtnCariSecimi" text="..." />
+                <DatePicker fx:id="dpBasKayit" layoutX="100.0" layoutY="469.0" prefHeight="25.0" prefWidth="120.0" />
+                <DatePicker fx:id="dpBasOdeme" layoutX="100.0" layoutY="496.0" prefHeight="25.0" prefWidth="120.0" />
+                <DatePicker fx:id="dpBasVade" layoutX="100.0" layoutY="523.0" prefHeight="25.0" prefWidth="120.0" />
+                <Text layoutX="225.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                <Text layoutX="225.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                <Text layoutX="225.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                <DatePicker fx:id="dpSonKayit" layoutX="235.0" layoutY="469.0" prefWidth="125.0" />
+                <DatePicker fx:id="dpSonOdeme" layoutX="235.0" layoutY="496.0" prefHeight="26.0" prefWidth="125.0" />
+                <DatePicker fx:id="dpSonVade" layoutX="235.0" layoutY="523.0" prefHeight="25.0" prefWidth="125.0" />
+                <Text layoutX="400.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seri No" />
+                <TextField fx:id="tfSeriNo" layoutX="475.0" layoutY="469.0" prefHeight="26.0" prefWidth="250.0" />
+                <Line endX="-100.0" endY="141.0" layoutX="850.0" layoutY="409.0" startX="-100.0" startY="-57.0" />
+                <Button fx:id="btnSorgula" layoutX="790.0" layoutY="410.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnSorgula" onMouseExited="#onMouseExitedbtnSorgula" onMousePressed="#onMousePressedbtnSorgula" onMouseReleased="#onMouseReleasedbtnSorgula" prefWidth="180.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;" text="Sorgula" />
+                <Button fx:id="btnExcel" layoutX="790.0" layoutY="450.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnExcel" onMouseExited="#onMouseExitedbtnExcel" onMousePressed="#onMousePressedbtnExcel" onMouseReleased="#onMouseReleasedbtnExcel" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="Excel'e Aktar" />
+                <Button fx:id="btnPDF" layoutX="790.0" layoutY="490.0" mnemonicParsing="false" onMouseEntered="#onMouseEnteredbtnPDF" onMouseExited="#onMouseExitedbtnPDF" onMousePressed="#onMousePressedbtnPDF" onMouseReleased="#onMouseReleasedbtnPDF" prefWidth="180.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="PDF'e Aktar" />
+                <Text layoutX="835.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raporlama" underline="true" />
+                <Line endX="649.5" layoutX="100.0" layoutY="385.0" startX="-100.0" />
+                <Text layoutX="14.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kayıt Sayısı:" />
+                <Text fx:id="txtKayitSayisi" fill="RED" layoutX="101.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+            </children>
+        </AnchorPane>
+    </content>
 </ScrollPane>

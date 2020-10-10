@@ -9,7 +9,7 @@ Ticari Yazılım Programı<br/><br/>
 <img src=/images/alis-iade1.png width=886 height=512 />
 <img src=/images/yeni-teklif1.png width=886 height=512 />
 <img src=/images/teklif-siparis-rapor1.png width=886 height=512 />
-<img src=/images/toplu-fis-fiyat-guncelle1.pngwidth=886 height=512 />
+<img src=/images/toplu-fis-fiyat-guncelle1.png width=886 height=512 />
 <img src=/images/faturasiz-satis1.png width=886 height=512 />
 <img src=/images/ayrintili-kasa1.png width=886 height=512 />
 <img src=/images/masraf-gider2.png width=886 height=512 />
